@@ -156,6 +156,7 @@ function NavigationMenuIndicator({
   )
 }
 
+/* eslint-disable react-refresh/only-export-components -- CVA trigger style shared with custom triggers */
 export {
   NavigationMenu,
   NavigationMenuContent,

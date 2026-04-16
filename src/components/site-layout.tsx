@@ -10,11 +10,13 @@ import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 import { DotGridBackground } from "@/components/dot-grid-background";
-import { Button } from "@/components/ui/button";
-import { LanguageSwitcher } from "@/components/language-switcher";
 import {
   getIndustriasNavItems,
   getServiciosNavItems,
+} from "@/components/nav-mega-menu-items";
+import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import {
   MegaMenuComunidad,
   MegaMenuIndustrias,
   MegaMenuInsights,

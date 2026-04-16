@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "dantex-acac7",
+    "staging": "dantex-acac7"
+  },
+  "targets": {},
+  "etags": {}
+}

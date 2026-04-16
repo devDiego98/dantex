@@ -74,7 +74,7 @@ export function ReviewsCarousel({
   autoplay = false,
   intervalMs = 6500,
 }: ReviewsCarouselProps) {
-  const safeItems = items ?? [];
+  const safeItems = useMemo(() => items ?? [], [items]);
   const [active, setActive] = useState(0);
   const activeItem = safeItems[active];
   const [bodyMinHeightPx, setBodyMinHeightPx] = useState(0);
