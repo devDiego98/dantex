@@ -29,6 +29,7 @@ import {
 import { VideoUnderVideoSection } from "@/components/video-under-video-section";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { ENGINEERING_IMPACT_VIDEOS } from "@/lib/site-videos";
 import { cn } from "@/lib/utils";
 
 const fadeUp = {
@@ -897,10 +898,10 @@ function ImpactScoreVideoShowcase() {
       "feedback",
     ] as const satisfies readonly ImpactScoreVideoItem["id"][];
     const srcById: Record<ImpactScoreVideoItem["id"], string> = {
-      matriz: "/videos/matriz-de-desempeno.mp4",
-      commits: "/videos/analisis-de-commits.mp4",
-      evolucion: "/videos/evolucion-profesional.mp4",
-      feedback: "/videos/feedback-con-ia.mp4",
+      matriz: ENGINEERING_IMPACT_VIDEOS.matriz,
+      commits: ENGINEERING_IMPACT_VIDEOS.commits,
+      evolucion: ENGINEERING_IMPACT_VIDEOS.evolucion,
+      feedback: ENGINEERING_IMPACT_VIDEOS.feedback,
     };
     return ids.map((id) => ({
       id,

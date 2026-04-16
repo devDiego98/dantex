@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ChefHat, Cpu, UtensilsCrossed } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
+import { HERO_VIDEOS } from "@/lib/site-videos";
 import { cn } from "@/lib/utils";
 
 const fadeUp = {
@@ -21,7 +22,7 @@ export function FoodtechHeroSection() {
     <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/videos/foodtech.mp4"
+        src={HERO_VIDEOS.foodtech}
         autoPlay
         loop
         muted

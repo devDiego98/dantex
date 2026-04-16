@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type RefObject } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { HERO_VIDEOS } from "@/lib/site-videos";
 
 const sectionPadding =
   "px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20 border-t border-white/8";
@@ -107,7 +108,7 @@ export function AgtechPage() {
       <section className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/videos/agriculture.mp4"
+          src={HERO_VIDEOS.agtech}
           autoPlay
           loop
           muted

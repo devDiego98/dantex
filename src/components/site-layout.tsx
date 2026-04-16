@@ -16,6 +16,7 @@ import {
 } from "@/components/nav-mega-menu-items";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { VideoPreloader } from "@/components/video-preloader";
 import {
   MegaMenuComunidad,
   MegaMenuIndustrias,
@@ -102,7 +103,12 @@ export function SiteLayout() {
   const { pathname } = useLocation();
   const serviciosItems = useMemo(() => getServiciosNavItems(t), [t]);
   const industriasItems = useMemo(() => getIndustriasNavItems(t), [t]);
-  const navItems = useMemo(
+  const navItems: {
+    label: string;
+    href: string;
+    disabled: boolean;
+    accordion?: "servicios" | "industrias";
+  }[] = useMemo(
     () =>
       [
         {
@@ -168,6 +174,7 @@ export function SiteLayout() {
 
   return (
     <div className="relative min-h-screen overflow-x-clip text-foreground">
+      <VideoPreloader />
       <ScrollToTop />
       <div
         className="fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(45,120,120,0.35),transparent)] bg-[#000a0a]"
@@ -346,11 +353,13 @@ export function SiteLayout() {
                             aria-expanded={mobileAccordion === item.accordion}
                             aria-controls={`mobile-${item.accordion}-subnav`}
                             id={`mobile-${item.accordion}-trigger`}
-                            onClick={() =>
+                            onClick={() => {
+                              const acc = item.accordion;
+                              if (acc == null) return;
                               setMobileAccordion((cur) =>
-                                cur === item.accordion ? null : item.accordion
-                              )
-                            }
+                                cur === acc ? null : acc
+                              );
+                            }}
                           >
                             <span className="flex-1">{item.label}</span>
                             <ChevronDown

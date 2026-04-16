@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Env (secrets — do not commit)
+.env
+.env.*
+!.env.example
+
 # Firebase
 .firebase
 firebase-debug.log
