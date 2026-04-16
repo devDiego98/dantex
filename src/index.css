@@ -132,4 +132,26 @@
   html {
     @apply font-sans;
     }
+
+  /* Consistent cursors for interactive controls */
+  button:not(:disabled):not([aria-disabled="true"]),
+  [role="button"]:not([aria-disabled="true"]),
+  a[href],
+  input[type="button"]:not(:disabled),
+  input[type="submit"]:not(:disabled),
+  input[type="reset"]:not(:disabled),
+  summary {
+    @apply cursor-pointer;
+  }
+}
+
+/**
+ * Engineering page: document scroll. Center alignment + mandatory completion;
+ * scroll-padding biases the snap “viewport” so the fixed nav clears the focal center.
+ */
+html.engineering-scroll-snap {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  scroll-padding-bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
 }
