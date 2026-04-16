@@ -1,0 +1,69 @@
+{
+  "sports": {
+    "hero": {
+      "kicker": "Industries · Sports & entertainment",
+      "title": "Game-changing tech for more connected experiences",
+      "lead": "Boost fan engagement, optimize performance, and unlock new business opportunities.",
+      "cta": "Level up your game",
+      "highlights": [
+        "Fans & engagement",
+        "High performance",
+        "OTT & entertainment"
+      ]
+    },
+    "introH2": "We build the digital infrastructure powering modern sports.",
+    "introP": "From major stadium experiences to data-driven performance tools—we develop ecosystems for live competition and global entertainment complexity.",
+    "dantexWay": "The Dantex Way",
+    "globalTitle": "Technology for sport at global scale",
+    "globalTech": [
+      {
+        "title": "Data & operations intelligence",
+        "body": "We turn fragmented data into value—actionable insights and automated processes to monetize fan data securely in real time."
+      },
+      {
+        "title": "Applied performance technology",
+        "body": "Precision-first. Performance tools from athlete tracking to retail—our AI delivers pro-grade metrics for athletes and fans."
+      },
+      {
+        "title": "Scalable, real-time infrastructure",
+        "body": "Highly reliable systems for massive concurrency—smart stadiums and OTT with smooth streaming and engagement at scale."
+      },
+      {
+        "title": "Next-gen entertainment platforms",
+        "body": "We modernize legacy cores into agile foundations—e‑commerce and premium memberships that elevate UX and long-term loyalty."
+      }
+    ],
+    "platformTitle": "Powering high-performance sports platforms",
+    "platformLead": "We make sure your digital core is resilient, secure, and ready for the next era of entertainment.",
+    "engineering": [
+      {
+        "title": "Agentic & generative AI",
+        "body": "Workflow automation and hyper-personalization across the fan journey."
+      },
+      {
+        "title": "Infrastructure modernization",
+        "body": "Migrate legacy sports systems to cloud-native architectures without disrupting live operations."
+      },
+      {
+        "title": "Unified digital strategy",
+        "body": "Align integrations with commercial and operational goals."
+      },
+      {
+        "title": "High-performance engineering",
+        "body": "Scalable systems for OTT, cloud gaming, and global broadcast."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "This is how the game transforms",
+    "moreStories": "Explore impact stories",
+    "readStory": "Read story",
+    "stories": [
+      {
+        "title": "When digital innovation plays at a world-class level"
+      },
+      {
+        "title": "Talleres & Dantex: Digital transformation for institutional efficiency"
+      }
+    ]
+  }
+}

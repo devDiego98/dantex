@@ -1,0 +1,66 @@
+{
+  "healthcare": {
+    "hero": {
+      "kicker": "Industrias · Salud",
+      "title": "Innovación tecnológica para el futuro de la salud",
+      "lead": "Diseñamos plataformas de IA seguras para salud & life sciences, transformando datos en mejores resultados.",
+      "cta": "Obtén orientación estratégica",
+      "highlights": ["Salud & Life Sciences", "Datos clínicos", "Cumplimiento"]
+    },
+    "introH2": "Acortamos la distancia entre el avance científico y la recuperación.",
+    "introLead": "Diseñamos ecosistemas que conectan Life Science & Pharma con Salud, asegurando un flujo de datos seguro del laboratorio al paciente.",
+    "providersTitle": "Para proveedores de salud y prestadores",
+    "providersLead": "Experiencias digitales centradas en el paciente para la prestación de cuidados modernos.",
+    "interopTitle": "Interoperabilidad e Integración",
+    "interopBody": "Rompe los silos. Conectamos sistemas EHR, LIS y facturación con estándares HL7 y FHIR para un flujo de datos seguro, en tiempo real y con integridad de pagos.",
+    "interopTags": [
+      "Soluciones de Experiencia del Paciente",
+      "Operaciones y Gestión de Miembros",
+      "EHR",
+      "Billing"
+    ],
+    "pharmaTitle": "Para Pharma y Life Sciences",
+    "pharmaLead": "Acelera la innovación y maximiza el impacto en el mercado con ingeniería ágil e infraestructura lista para GxP.",
+    "clinicalTitle": "Aceleración de Datos Clínicos",
+    "clinicalBody": "Acelera tus ensayos clínicos con IA generativa. Automatizamos la ingesta y el análisis de datos médicos complejos para obtener resultados más rápidos.",
+    "clinicalTags": [
+      "Engagement Comercial y del Paciente",
+      "Visibilidad de la Cadena de Valor"
+    ],
+    "trustTitle": "Ingeniería de Confianza en un Mundo Regulado",
+    "trustLead": "Las industrias críticas requieren una ingeniería crítica. Nuestras capacidades centrales se aplican en todo el espectro de la salud.",
+    "trustPillars": [
+      {
+        "title": "Seguridad y Cumplimiento",
+        "body": "Seguridad certificada ISO 27001. Experiencia en HIPAA (Privacidad) y construcción de infraestructura lista para validación GxP/FDA."
+      },
+      {
+        "title": "Data Science & AI",
+        "body": "Modelos de IA ética diseñados para desbloquear valor de Datos del Mundo Real (RWD) no estructurados, registros médicos y bases de datos de investigación."
+      },
+      {
+        "title": "Dominio de Cloud Agnostic",
+        "body": "Experiencia en AWS, Microsoft Azure y Google Cloud, optimizando arquitecturas para rendimiento y escalabilidad en entornos de salud."
+      },
+      {
+        "title": "Legacy Modernization",
+        "body": "Transformación de sistemas heredados (monolíticos) en arquitecturas escalables y nativas de la nube sin interrumpir operaciones críticas en curso."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "Descubre cómo Dantex impulsa la transformación en salud",
+    "moreStories": "Explora Historias de Impacto",
+    "discoverImpact": "Descubre el impacto",
+    "stories": [
+      {
+        "title": "Una forma más inteligente de manejar condiciones crónicas en niños"
+      },
+      {
+        "title": "Gobernanza en Cloud y gestión de costos con AWS Control Tower y Terraform"
+      },
+      {
+        "title": "Second Brain: El Asistente de IA para Decisiones Más Inteligentes y Rápidas"
+      }
+    ]
+  }
+}

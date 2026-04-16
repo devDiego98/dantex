@@ -1,0 +1,64 @@
+{
+  "energy": {
+    "hero": {
+      "line1": "Smart technology for",
+      "line2": "smarter energy",
+      "subtitle": "Precision software for a sustainable future.",
+      "cta": "Accelerate your evolution"
+    },
+    "operations": {
+      "headline": "Closing the gap between assets and insight. Intelligence is the fuel of modern energy.",
+      "dantexWay": "The Dantex Way",
+      "subhead": "Powering the future of energy operations",
+      "cards": [
+        {
+          "title": "Smart operations & automation",
+          "body": "We bridge physical assets and digital systems. By automating complex workflows in bioenergy and oil & gas, we deliver full transparency and real-time visibility—so data-driven decisions reduce operational risk."
+        },
+        {
+          "title": "Predictive analytics & strategy",
+          "body": "Use field data to eliminate downtime. Our predictive analytics turns siloed information into actionable intelligence, empowering energy leaders to make critical operational decisions with precision."
+        },
+        {
+          "title": "Supply chain & logistics optimization",
+          "body": "Energy efficiency is a logistics challenge. Drawing on biocarrier distribution and biomass logistics experience, we design traceable supply chains that optimize resource movement from source to delivery."
+        },
+        {
+          "title": "Digital core modernization",
+          "body": "We evolve legacy infrastructure for the next energy era—migrating monoliths to scalable, cloud-native platforms so your digital core can support renewables and new business models."
+        }
+      ]
+    },
+    "engineering": {
+      "title": "Reliable, secure, scalable engineering",
+      "items": [
+        {
+          "title": "Industrial IoT & connectivity",
+          "body": "Integrate field sensors and devices with centralized cloud architectures for real-time monitoring."
+        },
+        {
+          "title": "Agentic AI for energy",
+          "body": "Deploy autonomous AI agents to optimize maintenance schedules and energy consumption patterns."
+        },
+        {
+          "title": "Industrial security & ISO",
+          "body": "Implement ISO 27001–aligned processes to protect critical energy infrastructure and sensitive data."
+        },
+        {
+          "title": "Compliance & resilience",
+          "body": "Solutions built to meet the highest security and regulatory standards for critical infrastructure."
+        }
+      ]
+    },
+    "story": {
+      "kicker": "Featured story",
+      "title": "From operations to real outcomes",
+      "more": "Discover more stories",
+      "cardTitle": "TERA: 50% faster routing and real-time control for fuel transport",
+      "read": "Read story"
+    },
+    "nvidia": {
+      "body": "Explore and implement AI solutions to optimize operations, improve resource efficiency, and build more resilient energy systems."
+    }
+  }
+}

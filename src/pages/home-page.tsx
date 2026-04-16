@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,28 +11,30 @@ import {
 import { Input } from "@/components/ui/input";
 
 export function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <main className="flex flex-1 flex-col items-center pt-28 text-center sm:pt-32">
       <h1 className="font-chakra mb-4 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
-        Integramos personas y tecnología.
+        {t("home.heroTitle")}
       </h1>
       <p className="mb-12 max-w-2xl text-pretty text-base text-zinc-400 sm:text-lg">
-        Creamos soluciones que generan impacto real en los negocios.
+        {t("home.heroSubtitle")}
       </p>
 
       <div className="mb-20 w-full max-w-2xl">
         <div className="flex items-center gap-2 rounded-xl border border-teal-500/35 bg-black/45 px-3 py-2 shadow-inner shadow-black/40 backdrop-blur-sm sm:px-4">
           <Input
             type="search"
-            placeholder="Cuéntale a SAM qué necesitas..."
-            className="h-11 flex-1 border-0 bg-transparent px-2 text-base text-zinc-100 placeholder:text-zinc-500 focus-visible:ring-0 md:text-sm bg-transparent"
+            placeholder={t("home.searchPlaceholder")}
+            className="h-11 flex-1 border-0 !bg-transparent px-2 text-base text-zinc-100 placeholder:text-zinc-500 focus-visible:ring-0 md:text-sm bg-transparent"
           />
           <Button
             type="button"
             size="icon"
             variant="ghost"
             className="shrink-0 rounded-lg text-teal-300 hover:bg-teal-500/15 hover:text-teal-200"
-            aria-label="Enviar"
+            aria-label={t("home.send")}
           >
             <Send className="size-5" />
           </Button>
@@ -44,25 +47,25 @@ export function HomePage() {
       >
         <Card className="border-white/10 bg-zinc-950/60 text-left ring-white/10 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="text-white">Sobre Santex</CardTitle>
+            <CardTitle className="text-white">{t("home.cardAboutTitle")}</CardTitle>
             <CardDescription className="text-zinc-400">
-              Descubre cómo creamos valor desde hace 26 años.
+              {t("home.cardAboutDesc")}
             </CardDescription>
           </CardHeader>
         </Card>
         <Card className="border-white/10 bg-zinc-950/60 text-left ring-white/10 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="text-white">Explora el Sxt Lab</CardTitle>
+            <CardTitle className="text-white">{t("home.cardLabTitle")}</CardTitle>
             <CardDescription className="text-zinc-400">
-              Conoce el espacio de experimentación con IA.
+              {t("home.cardLabDesc")}
             </CardDescription>
           </CardHeader>
         </Card>
         <Card className="border-white/10 bg-zinc-950/60 text-left ring-white/10 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="text-white">Agenda una llamada</CardTitle>
+            <CardTitle className="text-white">{t("home.cardCallTitle")}</CardTitle>
             <CardDescription className="text-zinc-400">
-              Ponte en contacto con nuestro equipo.
+              {t("home.cardCallDesc")}
             </CardDescription>
           </CardHeader>
         </Card>

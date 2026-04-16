@@ -1,4 +1,7 @@
+import type { TFunction } from "i18next";
 import type { ReactNode } from "react";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
   Activity,
@@ -26,7 +29,8 @@ import { cn } from "@/lib/utils";
 const panel =
   "flex w-[min(100vw-2rem,44rem)] max-w-[44rem] overflow-hidden rounded-xl border border-white/10 bg-zinc-950 text-left text-white shadow-2xl shadow-black/50";
 
-const colLeft = "flex flex-1 flex-col border-r border-white/10 bg-black p-6 sm:p-7";
+const colLeft =
+  "flex flex-1 flex-col border-r border-white/10 bg-black p-6 sm:p-7";
 const colRight = "flex flex-1 flex-col bg-zinc-900/95 p-6 sm:p-7";
 
 function SectionLabel({ children }: { children: ReactNode }) {
@@ -37,26 +41,49 @@ function SectionLabel({ children }: { children: ReactNode }) {
   );
 }
 
+const disabledRowClass =
+  "cursor-not-allowed opacity-45 pointer-events-none select-none";
+
 function MegaRowLink({
   href = "#",
   icon: Icon,
   children,
   external,
   className,
+  disabled,
 }: {
   href?: string;
   icon: React.ComponentType<{ className?: string }>;
   children: React.ReactNode;
   external?: boolean;
   className?: string;
+  disabled?: boolean;
 }) {
+  const rowClass = cn(
+    "group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10",
+    disabled && disabledRowClass,
+    className
+  );
+
+  if (disabled) {
+    return (
+      <span className={rowClass} aria-disabled="true">
+        <Icon className="size-5 shrink-0 text-white/90" aria-hidden />
+        <span className="flex-1">{children}</span>
+        {external ? (
+          <ExternalLink className="size-4 shrink-0 text-zinc-500" aria-hidden />
+        ) : null}
+      </span>
+    );
+  }
+
+  const isInternalRoute = href.startsWith("/");
   return (
     <NavigationMenuLink
-      href={href}
-      className={cn(
-        "group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10",
-        className
-      )}
+      href={isInternalRoute ? undefined : href}
+      render={isInternalRoute ? <Link to={href} /> : undefined}
+      closeOnClick
+      className={rowClass}
     >
       <Icon className="size-5 shrink-0 text-white/90" aria-hidden />
       <span className="flex-1">{children}</span>
@@ -73,10 +100,25 @@ function MegaRowLink({
 function TextLink({
   href = "#",
   children,
+  disabled,
 }: {
   href?: string;
   children: React.ReactNode;
+  disabled?: boolean;
 }) {
+  if (disabled) {
+    return (
+      <span
+        className={cn(
+          "block rounded-lg px-2 py-2.5 text-sm font-medium text-white",
+          disabledRowClass
+        )}
+        aria-disabled="true"
+      >
+        {children}
+      </span>
+    );
+  }
   return (
     <NavigationMenuLink
       href={href}
@@ -87,82 +129,109 @@ function TextLink({
   );
 }
 
+export function getServiciosNavItems(t: TFunction) {
+  return [
+    {
+      label: t("navMega.servicios.aiEngineering"),
+      href: "/engineering",
+      icon: Globe2,
+    },
+    {
+      label: t("navMega.servicios.stxLab"),
+      href: "/ai-consulting-services/dantex-lab",
+      icon: FlaskConical,
+    },
+    {
+      label: t("navMega.servicios.aiConsulting"),
+      href: "/ai-consulting-services",
+      icon: Cog,
+    },
+  ] as const;
+}
+
+export function getIndustriasNavItems(t: TFunction) {
+  return [
+    { label: t("navMega.industries.ag"), href: "/agtech", icon: Radio },
+    { label: t("navMega.industries.energy"), href: "/energy", icon: Zap },
+    {
+      label: t("navMega.industries.finance"),
+      href: "/finance",
+      icon: CreditCard,
+    },
+    {
+      label: t("navMega.industries.foodtech"),
+      href: "/foodtech",
+      icon: ChefHat,
+    },
+    { label: t("navMega.industries.govtech"), href: "/govtech", icon: Flag },
+    {
+      label: t("navMega.industries.health"),
+      href: "/healthcare",
+      icon: HeartPulse,
+    },
+    {
+      label: t("navMega.industries.sports"),
+      href: "/sports-entertainment",
+      icon: Activity,
+    },
+  ] as const;
+}
+
 export function MegaMenuServicios() {
+  const { t } = useTranslation();
+  const serviciosItems = useMemo(() => getServiciosNavItems(t), [t]);
+  const solutionTags = useMemo(
+    () => [
+      t("navMega.solutionsTags.bim"),
+      t("navMega.solutionsTags.data"),
+      t("navMega.solutionsTags.devops"),
+      t("navMega.solutionsTags.cyber"),
+      t("navMega.solutionsTags.design"),
+    ],
+    [t]
+  );
+
   return (
     <div className={panel}>
       <div className={colLeft}>
-        <SectionLabel>Lo que hacemos</SectionLabel>
+        <SectionLabel>{t("navMega.whatWeDo")}</SectionLabel>
         <ul className="space-y-0.5">
-          <li>
-            <NavigationMenuLink
-              render={<Link to="/engineering" />}
-              closeOnClick
-              className="group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
-            >
-              <Globe2 className="size-5 shrink-0 text-white/90" aria-hidden />
-              <span className="flex-1">Ingeniería Optimizada con IA</span>
-            </NavigationMenuLink>
-          </li>
-          <li>
-            <NavigationMenuLink
-              render={<Link to="/ai-consulting-services/santex-lab" />}
-              closeOnClick
-              className="group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
-            >
-              <FlaskConical className="size-5 shrink-0 text-white/90" aria-hidden />
-              <span className="flex-1">STX Lab</span>
-            </NavigationMenuLink>
-          </li>
-          <li>
-            <NavigationMenuLink
-              render={<Link to="/ai-consulting-services" />}
-              closeOnClick
-              className="group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
-            >
-              <Cog className="size-5 shrink-0 text-white/90" aria-hidden />
-              <span className="flex-1">Consultoría en IA</span>
-            </NavigationMenuLink>
-          </li>
+          {serviciosItems.map(({ label, href, icon: Icon }) => (
+            <li key={href}>
+              <NavigationMenuLink
+                render={<Link to={href} />}
+                closeOnClick
+                className="group/row flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
+              >
+                <Icon className="size-5 shrink-0 text-white/90" aria-hidden />
+                <span className="flex-1">{label}</span>
+              </NavigationMenuLink>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={colRight}>
-        <SectionLabel>Soluciones</SectionLabel>
+        <SectionLabel>{t("navMega.solutions")}</SectionLabel>
         <ul className="space-y-0.5">
-          {["BIM", "Data", "DevOps", "Ciberseguridad", "Diseño de Producto"].map(
-            (label) => (
-              <li key={label}>
-                <TextLink href={`#${label.toLowerCase().replace(/\s+/g, "-")}`}>
-                  {label}
-                </TextLink>
-              </li>
-            )
-          )}
+          {solutionTags.map((label) => (
+            <li key={label}>
+              <TextLink disabled>{label}</TextLink>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   );
 }
 
-const industriasItems: { label: string; href: string; icon: typeof Radio }[] =
-  [
-    { label: "Agricultura", href: "#agricultura", icon: Radio },
-    { label: "Energia", href: "#energia", icon: Zap },
-    { label: "Finanzas", href: "#finanzas", icon: CreditCard },
-    { label: "Foodtech", href: "#foodtech", icon: ChefHat },
-    { label: "Govtech", href: "#govtech", icon: Flag },
-    { label: "Salud", href: "#salud", icon: HeartPulse },
-    {
-      label: "Deportes & Entretenimiento",
-      href: "#deportes",
-      icon: Activity,
-    },
-  ];
-
 export function MegaMenuIndustrias() {
+  const { t } = useTranslation();
+  const industriasItems = useMemo(() => getIndustriasNavItems(t), [t]);
+
   return (
     <div className={panel}>
       <div className={colLeft}>
-        <SectionLabel>Industrias</SectionLabel>
+        <SectionLabel>{t("navMega.industriesLabel")}</SectionLabel>
         <ul className="space-y-0.5">
           {industriasItems.map(({ label, href, icon }) => (
             <li key={label}>
@@ -174,71 +243,77 @@ export function MegaMenuIndustrias() {
         </ul>
       </div>
       <div className={colRight}>
-        <SectionLabel>Historias destacadas</SectionLabel>
-        <NavigationMenuLink
-          href="#historia-firehouse"
-          className="group flex w-full flex-col overflow-hidden rounded-lg border border-white/10 bg-black/40 p-0 transition-colors hover:border-white/20 hover:bg-black/50 focus-visible:bg-black/50"
+        <SectionLabel>{t("navMega.featuredStory")}</SectionLabel>
+        <div
+          className={cn(
+            "group flex w-full flex-col overflow-hidden rounded-lg border border-white/10 bg-black/40 p-0",
+            disabledRowClass
+          )}
+          aria-disabled="true"
         >
           <div className="aspect-[16/10] w-full overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=640&q=80"
               alt=""
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              className="h-full w-full object-cover"
               loading="lazy"
             />
           </div>
           <p className="p-4 text-sm leading-snug text-zinc-200">
-            Firehouse recurre a Santex para pagos más seguros, inteligentes y sin
-            interrupciones
+            {t("navMega.featuredBlurb")}
           </p>
-        </NavigationMenuLink>
+        </div>
       </div>
     </div>
   );
 }
 
-const insightsStories = [
-  {
-    title: "ROI en IA: ¿Tu proyecto genera valor real?",
-    img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=160&q=80",
-  },
-  {
-    title: "Cómo escalar equipos de producto con IA responsable",
-    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=160&q=80",
-  },
-];
-
 export function MegaMenuInsights() {
+  const { t } = useTranslation();
+  const insightsStories = useMemo(
+    () => [
+      {
+        title: t("navMega.insight1"),
+        img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=160&q=80",
+      },
+      {
+        title: t("navMega.insight2"),
+        img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=160&q=80",
+      },
+    ],
+    [t]
+  );
+
   return (
     <div className={panel}>
       <div className={colLeft}>
-        <SectionLabel>Insights</SectionLabel>
+        <SectionLabel>{t("navMega.insightsLabel")}</SectionLabel>
         <ul className="space-y-0.5">
           <li>
-            <MegaRowLink href="#historias-impacto" icon={Sparkles}>
-              Historias de impacto
+            <MegaRowLink href="#historias-impacto" icon={Sparkles} disabled>
+              {t("navMega.impactStories")}
             </MegaRowLink>
           </li>
           <li>
-            <MegaRowLink href="#blog" icon={BookOpen}>
-              Blog
+            <MegaRowLink href="#blog" icon={BookOpen} disabled>
+              {t("navMega.blog")}
             </MegaRowLink>
           </li>
           <li>
-            <MegaRowLink href="#podcast" icon={AudioLines}>
-              Podcast
+            <MegaRowLink href="#podcast" icon={AudioLines} disabled>
+              {t("navMega.podcast")}
             </MegaRowLink>
           </li>
         </ul>
       </div>
       <div className={colRight}>
-        <SectionLabel>Últimas historias</SectionLabel>
+        <SectionLabel>{t("navMega.latestStories")}</SectionLabel>
         <ul className="space-y-3">
           {insightsStories.map((story) => (
             <li key={story.title}>
-              <NavigationMenuLink
-                href="#"
-                className="flex gap-3 rounded-lg p-2 transition-colors hover:bg-white/10 focus-visible:bg-white/10"
+              <div
+                className={cn("flex gap-3 rounded-lg p-2", disabledRowClass)}
+                aria-disabled="true"
               >
                 <img
                   src={story.img}
@@ -249,7 +324,7 @@ export function MegaMenuInsights() {
                 <span className="text-sm font-medium leading-snug text-zinc-100">
                   {story.title}
                 </span>
-              </NavigationMenuLink>
+              </div>
             </li>
           ))}
         </ul>
@@ -259,53 +334,61 @@ export function MegaMenuInsights() {
 }
 
 export function MegaMenuComunidad() {
+  const { t } = useTranslation();
+
   return (
     <div className={panel}>
       <div className={colLeft}>
-        <SectionLabel>Somos Santex</SectionLabel>
+        <SectionLabel>{t("navMega.communityLabel")}</SectionLabel>
         <ul className="space-y-0.5">
           <li>
-            <MegaRowLink href="#trabaja" icon={User}>
-              Trabaja en Santex
+            <MegaRowLink href="#trabaja" icon={User} disabled>
+              {t("navMega.workAt")}
             </MegaRowLink>
           </li>
           <li>
-            <MegaRowLink href="#cultura" icon={Sparkles}>
-              Cultura
+            <MegaRowLink href="#cultura" icon={Sparkles} disabled>
+              {t("navMega.culture")}
             </MegaRowLink>
           </li>
           <li>
-            <MegaRowLink href="#sustentabilidad" icon={Leaf} external>
-              Sustentabilidad
+            <MegaRowLink href="#sustentabilidad" icon={Leaf} external disabled>
+              {t("navMega.sustainability")}
             </MegaRowLink>
           </li>
           <li>
-            <MegaRowLink href="#hackathon" icon={Code2} external>
-              Hackathon
+            <MegaRowLink href="#hackathon" icon={Code2} external disabled>
+              {t("navMega.hackathon")}
             </MegaRowLink>
           </li>
         </ul>
       </div>
       <div className={colRight}>
-        <SectionLabel>Haciendo la diferencia</SectionLabel>
+        <SectionLabel>{t("navMega.makingADifference")}</SectionLabel>
         <ul className="space-y-0.5">
           <li>
-            <NavigationMenuLink
-              href="#"
-              className="flex w-full items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
+            <div
+              className={cn(
+                "flex w-full items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-medium text-white",
+                disabledRowClass
+              )}
+              aria-disabled="true"
             >
               <span className="flex-1">AI League for Good</span>
               <ExternalLink className="size-4 text-zinc-500" aria-hidden />
-            </NavigationMenuLink>
+            </div>
           </li>
           <li>
-            <NavigationMenuLink
-              href="#"
-              className="flex w-full items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 focus-visible:bg-white/10"
+            <div
+              className={cn(
+                "flex w-full items-center gap-2 rounded-lg px-2 py-2.5 text-sm font-medium text-white",
+                disabledRowClass
+              )}
+              aria-disabled="true"
             >
               <span className="flex-1">Technology with Purpose</span>
               <ExternalLink className="size-4 text-zinc-500" aria-hidden />
-            </NavigationMenuLink>
+            </div>
           </li>
         </ul>
       </div>

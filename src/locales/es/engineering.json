@@ -1,0 +1,134 @@
+{
+  "engineering": {
+    "hero": {
+      "kicker": "Lo que hacemos",
+      "title": "Ingeniería Optimizada con IA",
+      "subtitle": "Integra expertos, IA y métricas transparentes para lograr resultados concretos.",
+      "cta": "Descubre lo que puedes lograr"
+    },
+    "marquee": {
+      "title": "Impacto con nuestras soluciones"
+    },
+    "dantexWay": {
+      "label": "The Dantex Way",
+      "title": "Enfoque de Impacto",
+      "deliveryBadge": "Delivery aumentado",
+      "deliveryTitle": "Delivery más rápido y potenciado con IA",
+      "deliveryBody": "Combina equipos de ingeniería con copilots, QA automatizado y analítica predictiva para reducir retrabajo y acelerar resultados.",
+      "deliveryAlt": "Delivery potenciado con IA",
+      "impactBadge": "Desarrollo orientado al impacto",
+      "impactTitle": "Medimos el valor entregado, commit por commit",
+      "impactBody": "Cada cambio de código se evalúa por su profundidad técnica e impacto en el negocio, para que tu proyecto avance con propósito.",
+      "impactAlt": "Panel de métricas y ciudad en movimiento",
+      "verified": "Verified",
+      "impactLabel": "Impact",
+      "score": "Score: 80"
+    },
+    "howItWorks": {
+      "kicker": "Un proceso transparente para medir el impacto",
+      "title": "Cómo funciona",
+      "stepAria": "Paso {{id}}: {{title}}",
+      "step1": {
+        "title": "Cada commit es analizado por nuestro modelo de IA",
+        "body": "Escanea cada cambio para entender qué se modificó y por qué.",
+        "commitLine": "Feat: add lazy loading to dashboard widgets",
+        "author": "María"
+      },
+      "step2": {
+        "title": "Se considera la arquitectura, pruebas, tickets y notas de release",
+        "body": "El modelo cruza cada commit con la arquitectura, tareas relacionadas, resultados de testing y documentación."
+      },
+      "step3": {
+        "title": "Medición y mejora con señales de impacto",
+        "body": "Cada iteración se evalúa con métricas claras para reducir retrabajo y priorizar lo que importa al negocio."
+      }
+    },
+    "whatYouGet": {
+      "title": "Qué obtienes",
+      "items": [
+        "Identificar a los héroes ocultos",
+        "Feedback objetivo y sin sesgos",
+        "Alertas tempranas sobre deuda técnica",
+        "Benchmarks de velocidad y calidad entre equipos",
+        "Claridad sobre el ROI, desde el esfuerzo hasta el impacto"
+      ]
+    },
+    "impactVideo": {
+      "kicker": "Soluciones",
+      "title": "Software de última generación",
+      "tabs": {
+        "matriz": "Matriz de Desempeño",
+        "commits": "Análisis de Commits",
+        "evolucion": "Evolución Profesional",
+        "feedback": "Feedback con IA"
+      },
+      "playVideo": "Reproducir video",
+      "playAgain": "Reproducir de nuevo"
+    },
+    "reviews": {
+      "kicker": "Reseñas",
+      "title": "Lo que dicen nuestros clientes",
+      "items": [
+        {
+          "quote": "El equipo de líderes siempre está disponible para ayudarnos en todo. Además, el equipo técnico es muy sólido y comprometido con nuestros proyectos.",
+          "author": "Bruno Tadayoshi Mendes Doy",
+          "role": "Director de Ingeniería",
+          "company": "Restaurant Brands International"
+        },
+        {
+          "quote": "La colaboración fue fluida desde el día uno: claridad, velocidad y una ejecución impecable. Se sienten como una extensión del equipo.",
+          "author": "Líder de Tecnología",
+          "role": "Engineering Manager",
+          "company": "Enterprise"
+        },
+        {
+          "quote": "Excelente nivel técnico y foco en resultados. Cada entrega venía con visibilidad del impacto y una comunicación impecable.",
+          "author": "Director de Producto",
+          "role": "Head of Product",
+          "company": "Retail"
+        }
+      ]
+    },
+    "services": {
+      "sectionTitle": "Nuestros servicios de ingeniería",
+      "consulting": {
+        "title": "Consultoría",
+        "desc": "Estrategia técnica y de producto alineada a tus objetivos de negocio."
+      },
+      "design": {
+        "title": "Diseño y Cálculo",
+        "desc": "Modelado, simulación y validación con rigor de ingeniería."
+      },
+      "projects": {
+        "title": "Gestión de Proyectos",
+        "desc": "Entregas predecibles con visibilidad y métricas en tiempo real."
+      },
+      "maintenance": {
+        "title": "Mantenimiento",
+        "desc": "Operación continua, observabilidad y mejora incremental."
+      },
+      "data": {
+        "title": "Análisis de Datos",
+        "desc": "De métricas a decisiones: pipelines, dashboards y analítica avanzada."
+      }
+    },
+    "stats": {
+      "projects": "Proyectos entregados",
+      "specialists": "Especialistas",
+      "industries": "Industrias"
+    },
+    "contact": {
+      "kicker": "¿Estás listo?",
+      "title": "¿Tienes un proyecto en mente? Hablemos de tus ideas",
+      "label": "Contáctanos",
+      "subtitle": "Cuéntanos qué necesitas y te respondemos en breve.",
+      "name": "Nombre",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "fabAria": "Abrir contacto"
+    },
+    "byAuthor": "By {{name}}"
+  }
+}

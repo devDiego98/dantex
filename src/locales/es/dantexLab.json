@@ -1,0 +1,140 @@
+{
+  "dantexLab": {
+    "fabAria": "Abrir chat",
+    "hero": {
+      "title": "Tus ideas, están estratégicas y tienen un gran escalamiento",
+      "lead": "Acompañamos a equipos líderes a convertir visión en productos de IA con rigor, velocidad y gobernanza.",
+      "cta": "Hablemos de tus ideas"
+    },
+    "agile": {
+      "kicker": "CÓMO PODEMOS TRABAJAR JUNTOS",
+      "title": "Cinco Etapas:",
+      "titleAccent": "Ágiles y modulares",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "stages": [
+        {
+          "title": "Visión estratégica",
+          "body": "Alineamos la estrategia de IA con los objetivos del negocio y evaluamos preparación en liderazgo, datos, talento y cultura.",
+          "note": "¿No sabes si tu empresa está lista para adoptar IA? Esta fase da claridad para iniciar con foco y avanzar hacia una estrategia sólida."
+        },
+        {
+          "title": "Análisis de viabilidad",
+          "body": "Identifica y prioriza casos de uso de alto impacto. Validamos oportunidades, estado de datos, compatibilidad técnica y proyección de retorno.",
+          "note": "Cuando todo parece prioridad, cuesta saber por dónde empezar. Te ayudamos a enfocarte en lo valioso y factible ahora."
+        },
+        {
+          "title": "Prototipo",
+          "body": "Construimos un MVP en semanas para validar con usuarios reales, métricas y guardrails de calidad.",
+          "note": "Reducimos incertidumbre rápido: prototipos que aprenden, miden y muestran valor sin comprometer la operación."
+        },
+        {
+          "title": "Validación",
+          "body": "Iteramos con feedback de stakeholders, tests y observabilidad para endurecer el producto antes de escalar.",
+          "note": "Aseguramos performance, seguridad y experiencia antes de invertir en operación y despliegue."
+        },
+        {
+          "title": "Escala",
+          "body": "Estandarizamos MLOps, gobierno y operación para crecer sin fricción, con equipos internos o squads Dantex.",
+          "note": "Pasamos de “funciona” a “funciona siempre”: monitoreo, costos, compliance y mejora continua."
+        }
+      ]
+    },
+    "objectives": {
+      "title": "Tus objetivos, potenciados por nuestra experiencia",
+      "bullets": [
+        "Squads senior con experiencia en producto, datos e ingeniería de IA.",
+        "Marcos de gobernanza y seguridad alineados a estándares enterprise.",
+        "Arquitectura y MLOps pensados para evolucionar sin deuda técnica oculta."
+      ],
+      "imageAlt": "Equipo colaborando con notas en un tablero de cristal"
+    },
+    "packages": {
+      "title": "Paquetes inteligentes para definir tu próximo movimiento en IA",
+      "lead": "Elige el ritmo y profundidad adecuados para tu contexto: desde claridad estratégica hasta un hub de innovación continuo.",
+      "cta": "Ver todos los paquetes",
+      "items": [
+        {
+          "name": "Discovery Venture",
+          "points": [
+            "Taller de alineación y mapa de oportunidades",
+            "Assessment de datos y riesgos",
+            "Documento ejecutivo de próximos pasos"
+          ]
+        },
+        {
+          "name": "AI Sprint",
+          "points": [
+            "Prototipo funcional en semanas, no meses",
+            "Diseño de prompts, evaluación y trazabilidad",
+            "Demo con métricas de calidad y adopción"
+          ]
+        },
+        {
+          "name": "AI Innovation Hub",
+          "points": [
+            "Co-création con tu equipo de producto",
+            "Roadmap multi-release y capacitación",
+            "Opción de handover o extensión Dantex"
+          ]
+        }
+      ]
+    },
+    "caseStudies": {
+      "title": "Historias reales impulsadas por sesiones del Lab",
+      "readMore": "Leer más",
+      "cases": [
+        {
+          "title": "De datos dispersos a copiloto operativo en retail",
+          "alt": "Profesional revisando paneles de datos"
+        },
+        {
+          "title": "Asistente clínico con controles de privacidad por diseño",
+          "alt": "Contexto de atención médica y tecnología"
+        },
+        {
+          "title": "Automatización inteligente en cadena logística global",
+          "alt": "Operaciones y logística"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Respuestas a tus preguntas estratégicas",
+      "lead": "Transparencia desde el primer día: alcance, riesgos y expectativas realistas sobre lo que la IA puede aportar a tu negocio.",
+      "items": [
+        {
+          "q": "¿Cuánto dura un engagement típico del Lab?",
+          "a": "Depende del paquete: desde dos semanas de sprint hasta programas de varios meses con entregas quincenales y gobernanza compartida."
+        },
+        {
+          "q": "¿Trabajan con nuestro stack y proveedor de nube?",
+          "a": "Sí. Integramos con AWS, Azure y GCP, y respetamos políticas de identidad, redes y secretos de tu organización."
+        },
+        {
+          "q": "¿Cómo protegen datos sensibles y propiedad intelectual?",
+          "a": "Usamos acuerdos de confidencialidad, ambientes aislados cuando aplica, y opciones de procesamiento sin retención según el caso de uso."
+        },
+        {
+          "q": "¿Qué necesitamos preparar antes de la primera sesión?",
+          "a": "Un sponsor de negocio, acceso a documentación de producto/datos de alto nivel, y una lista priorizada de preguntas o hipótesis."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Generemos soluciones de IA con impacto real",
+      "quote": "“El Lab nos ayudó a priorizar tres casos de uso con ROI claro y un prototipo que hoy está en piloto con clientes.”",
+      "name": "Nombre",
+      "namePh": "Tu nombre",
+      "company": "Empresa",
+      "companyPh": "Empresa",
+      "email": "Email",
+      "emailPh": "nombre@empresa.com",
+      "message": "Mensaje",
+      "messagePh": "Cuéntanos sobre tu iniciativa o reto",
+      "submit": "Enviar"
+    },
+    "partners": {
+      "title": "Aliados tecnológicos"
+    }
+  }
+}

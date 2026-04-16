@@ -1,0 +1,134 @@
+{
+  "engineering": {
+    "hero": {
+      "kicker": "What we do",
+      "title": "AI-optimized engineering",
+      "subtitle": "Bring together experts, AI, and transparent metrics to deliver concrete outcomes.",
+      "cta": "See what you can achieve"
+    },
+    "marquee": {
+      "title": "Impact with our solutions"
+    },
+    "dantexWay": {
+      "label": "The Dantex Way",
+      "title": "Impact focus",
+      "deliveryBadge": "Augmented delivery",
+      "deliveryTitle": "Faster delivery, powered by AI",
+      "deliveryBody": "Combine engineering teams with copilots, automated QA, and predictive analytics to cut rework and accelerate results.",
+      "deliveryAlt": "AI-powered delivery",
+      "impactBadge": "Impact-driven development",
+      "impactTitle": "We measure value delivered, commit by commit",
+      "impactBody": "Every code change is evaluated for technical depth and business impact so your project moves forward with purpose.",
+      "impactAlt": "Metrics panel and city in motion",
+      "verified": "Verified",
+      "impactLabel": "Impact",
+      "score": "Score: 80"
+    },
+    "howItWorks": {
+      "kicker": "A transparent process to measure impact",
+      "title": "How it works",
+      "stepAria": "Step {{id}}: {{title}}",
+      "step1": {
+        "title": "Every commit is analyzed by our AI model",
+        "body": "It scans each change to understand what was modified and why.",
+        "commitLine": "Feat: add lazy loading to dashboard widgets",
+        "author": "María"
+      },
+      "step2": {
+        "title": "Architecture, tests, tickets, and release notes are considered",
+        "body": "The model cross-references each commit with architecture, related tasks, testing results, and documentation."
+      },
+      "step3": {
+        "title": "Measurement and improvement with impact signals",
+        "body": "Each iteration is evaluated with clear metrics to reduce rework and prioritize what matters to the business."
+      }
+    },
+    "whatYouGet": {
+      "title": "What you get",
+      "items": [
+        "Spot hidden heroes on the team",
+        "Objective, unbiased feedback",
+        "Early warnings on technical debt",
+        "Speed and quality benchmarks across teams",
+        "Clarity on ROI—from effort to impact"
+      ]
+    },
+    "impactVideo": {
+      "kicker": "Solutions",
+      "title": "Next-generation software",
+      "tabs": {
+        "matriz": "Performance matrix",
+        "commits": "Commit analysis",
+        "evolucion": "Professional growth",
+        "feedback": "AI-powered feedback"
+      },
+      "playVideo": "Play video",
+      "playAgain": "Play again"
+    },
+    "reviews": {
+      "kicker": "Reviews",
+      "title": "What our clients say",
+      "items": [
+        {
+          "quote": "Leadership is always there to help us with everything. The technical team is also very strong and committed to our projects.",
+          "author": "Bruno Tadayoshi Mendes Doy",
+          "role": "Director of Engineering",
+          "company": "Restaurant Brands International"
+        },
+        {
+          "quote": "Collaboration was smooth from day one: clarity, speed, and flawless execution. They feel like an extension of the team.",
+          "author": "Technology leader",
+          "role": "Engineering Manager",
+          "company": "Enterprise"
+        },
+        {
+          "quote": "Excellent technical depth and focus on results. Every delivery came with clear impact visibility and impeccable communication.",
+          "author": "Product Director",
+          "role": "Head of Product",
+          "company": "Retail"
+        }
+      ]
+    },
+    "services": {
+      "sectionTitle": "Our engineering services",
+      "consulting": {
+        "title": "Consulting",
+        "desc": "Technical and product strategy aligned with your business goals."
+      },
+      "design": {
+        "title": "Design & calculation",
+        "desc": "Modeling, simulation, and validation with engineering rigor."
+      },
+      "projects": {
+        "title": "Project management",
+        "desc": "Predictable delivery with visibility and real-time metrics."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "desc": "Continuous operations, observability, and incremental improvement."
+      },
+      "data": {
+        "title": "Data analytics",
+        "desc": "From metrics to decisions: pipelines, dashboards, and advanced analytics."
+      }
+    },
+    "stats": {
+      "projects": "Projects delivered",
+      "specialists": "Specialists",
+      "industries": "Industries"
+    },
+    "contact": {
+      "kicker": "Ready?",
+      "title": "Have a project in mind? Let’s talk about your ideas",
+      "label": "Contact us",
+      "subtitle": "Tell us what you need and we’ll get back to you shortly.",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "fabAria": "Open contact"
+    },
+    "byAuthor": "By {{name}}"
+  }
+}

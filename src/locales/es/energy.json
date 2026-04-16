@@ -1,0 +1,64 @@
+{
+  "energy": {
+    "hero": {
+      "line1": "Tecnología inteligente para",
+      "line2": "una energía más inteligente",
+      "subtitle": "Software de precisión para un futuro sostenible.",
+      "cta": "Impulsa tu evolución"
+    },
+    "operations": {
+      "headline": "Cerrando la brecha entre los activos y el conocimiento. La inteligencia es el combustible de la energía moderna.",
+      "dantexWay": "The Dantex Way",
+      "subhead": "Impulsando el futuro de las operaciones energéticas",
+      "cards": [
+        {
+          "title": "Operaciones Inteligentes y Automatización",
+          "body": "Construimos el puente entre los activos físicos y los sistemas digitales. Al automatizar flujos de trabajo complejos en Bioenergía y Petróleo y Gas, garantizamos una transparencia total y visibilidad en tiempo real, permitiendo decisiones más rápidas basadas en datos que reducen el riesgo operativo."
+        },
+        {
+          "title": "Analítica Predictiva y Estrategia",
+          "body": "Aprovecha los datos de campo para eliminar los tiempos de inactividad. Nuestra Analítica Predictiva transforma la información aislada en inteligencia accionable, empoderando a los líderes del sector energético para tomar decisiones operativas críticas con absoluta precisión y coraje técnico."
+        },
+        {
+          "title": "Optimización de la Cadena de Suministro y Logística",
+          "body": "La eficiencia energética es un desafío logístico. Aprovechando nuestra experiencia en la distribución de biocombustibles y logística de biomasa, diseñamos cadenas de suministro trazables que optimizan el movimiento de recursos desde el origen hasta la entrega final."
+        },
+        {
+          "title": "Modernización del Núcleo Digital",
+          "body": "Evolucionamos la infraestructura heredada para la próxima era energética. Migramos sistemas monolíticos a plataformas escalables y nativas de la nube, asegurando que su núcleo digital sea lo suficientemente resiliente para respaldar la transición hacia las energías renovables y nuevos modelos de negocio."
+        }
+      ]
+    },
+    "engineering": {
+      "title": "Ingeniería confiable, segura y escalable",
+      "items": [
+        {
+          "title": "IoT Industrial y Conectividad",
+          "body": "Integración de sensores y dispositivos de campo con arquitecturas de nube centralizadas para el monitoreo en tiempo real."
+        },
+        {
+          "title": "IA Agéntica para Energía",
+          "body": "Despliegue de agentes de IA autónomos para optimizar los cronogramas de mantenimiento y los patrones de consumo energético."
+        },
+        {
+          "title": "Seguridad Industrial e ISO",
+          "body": "Implementación de procesos certificados bajo la norma ISO 27001 para proteger la infraestructura energética crítica y los datos sensibles."
+        },
+        {
+          "title": "Cumplimiento y Resiliencia",
+          "body": "Implementación de soluciones diseñadas para cumplir con los más altos estándares de seguridad y regulación en infraestructura crítica."
+        }
+      ]
+    },
+    "story": {
+      "kicker": "Historia destacada",
+      "title": "De la operación a los resultados reales",
+      "more": "Descubre más historias",
+      "cardTitle": "TERA: Ruteo 50% más rápido y control en tiempo real para el transporte de combustible",
+      "read": "Leer historia"
+    },
+    "nvidia": {
+      "body": "Explora e implementa soluciones de IA para optimizar las operaciones, mejorar la eficiencia de los recursos y construir sistemas energéticos más resilientes."
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "pageNvidia": {
+    "healthcare": "Explora e implementa soluciones de Generative AI, Computer Vision y Machine Learning que simplifican procesos, mejoran la prestación de servicios de salud y habilitan sistemas más inteligentes en toda la industria healthcare.",
+    "foodtech": "Impulsa la productividad de tu negocio y mejora la eficiencia operativa y la automatización de tu restaurante con Dantex.",
+    "govtech": "Implementamos soluciones de IA que modernizan instituciones, fomentan decisiones basadas en datos y promueven una innovación pública sostenible."
+  },
+  "finance": {
+    "hero": {
+      "kicker": "Industrias · Finanzas",
+      "titleLine1": "Soluciones financieras preparadas",
+      "titleLine2": "para el futuro",
+      "lead": "Ayudamos a las empresas a transformar operaciones y crear soluciones financieras a medida.",
+      "cta": "Impulsa tu futuro",
+      "highlights": ["Seguridad", "Producto", "Core Banking"]
+    },
+    "services": {
+      "headline": "Desde billeteras digitales hasta plataformas de préstamos, la IA transformó las finanzas. Con Dantex escala de manera segura e innova más rápido.",
+      "subhead": "Servicios Financieros",
+      "cards": [
+        {
+          "title": "Portales de adquisición de clientes",
+          "body": "Atrae con simulaciones, herramientas y contenido a medida que generan confianza y apoyan decisiones informadas."
+        },
+        {
+          "title": "Soluciones de onboarding",
+          "body": "Onboarding seguro y automatizado con validación de identidad, evaluaciones de riesgo y cumplimiento integrado en cada proceso."
+        },
+        {
+          "title": "Desarrollo de producto end-to-end",
+          "body": "Diseña, personaliza y lanza productos financieros a escala con plataformas en la nube y arquitecturas de microservicios."
+        },
+        {
+          "title": "Operaciones financieras seguras",
+          "body": "Protege transacciones con protocolos sólidos, detección de fraudes y gestión de accesos en todos los sistemas."
+        },
+        {
+          "title": "Operaciones optimizadas y eficientes",
+          "body": "Moderniza arquitecturas, automatiza procesos de back-office y refuerza la resiliencia para un rendimiento rentable."
+        },
+        {
+          "title": "Gestión del ciclo de vida del cliente",
+          "body": "Ofrece experiencias fluidas de la adquisición a la retención con plataformas y engagement impulsado por IA."
+        },
+        {
+          "title": "De estrategia de datos a IA a escala",
+          "body": "Convierte datos en impacto con análisis y modelos de IA/ML implementados en entornos de producción."
+        }
+      ]
+    },
+    "stories": {
+      "kicker": "From Potential to Impact",
+      "title": "Explora cómo transformamos soluciones financieras",
+      "more": "Descubre más historias",
+      "discoverImpact": "Descubre el impacto",
+      "items": [
+        {
+          "title": "Transformando la Gestión de Contenidos Financieros a Gran Escala"
+        },
+        {
+          "title": "F.A.S.T. – Inteligencia Fiscal con IA Generativa"
+        },
+        {
+          "title": "Wibond: La billetera virtual todo en uno para transacciones seguras y eficientes"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experiencia en FinTech y Banca",
+      "lead": "Sabemos cómo crear valor con enfoque estratégico.",
+      "tags": [
+        "Innovación en pagos y préstamos",
+        "Modernización de Banca y FinTechs",
+        "Experiencia del cliente y finanzas personalizadas",
+        "Finanzas seguras e impulsadas por IA"
+      ],
+      "valueProps": [
+        {
+          "title": "Soluciones a medida",
+          "body": "Diseñamos soluciones tanto para organizaciones financieras como para compañías no financieras, impulsando su crecimiento."
+        },
+        {
+          "title": "Delivery más rápido y potenciado con IA",
+          "body": "Ingeniería optimizada con IA que acelera procesos, disminuye costos y reduce el time-to-market."
+        },
+        {
+          "title": "Experiencia comprobada",
+          "body": "Hemos creado plataformas para pagos, préstamos e inversiones, trabajando con fintechs, bancos y actores de distintas industrias."
+        },
+        {
+          "title": "Seguridad y Compliance",
+          "body": "Protocolos de nivel bancario, detección de fraudes y cumplimiento regulatorio que garantizan los más altos estándares en cada proyecto."
+        },
+        {
+          "title": "Impacto medido en resultados",
+          "body": "Con un 95% de retención, un 94% de lealtad y un NPS de 86, nuestro historial demuestra impacto real y medible para clientes en todo el mundo."
+        }
+      ]
+    },
+    "nvidia": {
+      "body": "Mejora la eficiencia, reduce riesgos y acelera la transformación con soluciones de IA diseñadas para servicios financieros."
+    }
+  },
+  "foodtech": {
+    "solutions": [
+      {
+        "title": "Pedidos y pagos inteligentes",
+        "body": "Experiencias de compra sin fricción y con personalización basada en IA. Pagos móviles seguros e integración con POS que mejoran la satisfacción del cliente e incrementan los ingresos."
+      },
+      {
+        "title": "Integraciones",
+        "body": "Unifica tu sistema con integraciones robustas entre plataformas de delivery, POS, programas de fidelización y soluciones ERP, garantizando escalabilidad y eficiencia operativa."
+      },
+      {
+        "title": "IA y automatización",
+        "body": "Chatbots con inteligencia artificial, analítica predictiva y herramientas de automatización para optimizar flujos en cocina, reducir tiempos de espera y mejorar la toma de decisiones operativas."
+      },
+      {
+        "title": "Gestión de inventario y datos",
+        "body": "Visibilidad en tiempo real del stock, automatización de la reposición y menos desperdicio con insights basados en datos que optimizan la cadena de suministro y la operación del inventario."
+      },
+      {
+        "title": "Kiosk y soluciones self-service",
+        "body": "Mejora la experiencia del cliente y aumenta el valor promedio de los pedidos con quioscos interactivos diseñados para un autoservicio rápido y eficiente en restaurantes de comida rápida."
+      },
+      {
+        "title": "Soluciones para sistemas de franquicias",
+        "body": "Impulsa a los operadores de franquicias con tecnología que estandariza procesos, mejora el seguimiento del rendimiento y garantiza la consistencia entre locales."
+      },
+      {
+        "title": "UX/UI y Calidad",
+        "body": "Experiencias digitales fluidas con diseño centrado en el usuario, pruebas rigurosas y optimización del rendimiento para garantizar accesibilidad y engagement."
+      }
+    ],
+    "stories": [
+      {
+        "title": "Cómo Dantex transformó el análisis de datos para el quinto operador de comida rápida más grande del mundo"
+      },
+      {
+        "title": "Optimizando la disposición de la tienda y la seguridad alimentaria con reconocimiento de video impulsado por IA"
+      },
+      {
+        "title": "Firehouse recurre a Dantex para pagos más seguros, inteligentes y sin interrupciones"
+      }
+    ],
+    "drivers": [
+      {
+        "title": "Adopción acelerada de IA",
+        "body": "Acompañamos a equipos de operaciones y producto a incorporar IA en flujos reales de restaurante, con foco en valor medible."
+      },
+      {
+        "title": "Reducción de desperdicio",
+        "body": "Automatizar inventario y pronósticos de demanda ayuda a minimizar mermas y costos de insumos."
+      },
+      {
+        "title": "Incremento en ventas",
+        "body": "Pedidos digitales, personalización y pagos fluidos impulsan conversión y ticket promedio."
+      }
+    ],
+    "sections": {
+      "visionKicker": "Yes, It's Possible",
+      "visionTitle": "Nuestra visión en acción",
+      "visionLead": "Aumenta la productividad de tu negocio y la eficiencia operativa de tu restaurante con Dantex.",
+      "visionCta": "Saber más",
+      "solutionsHeader": "Soluciones para restaurantes",
+      "storiesKicker": "From Potential to Impact",
+      "storiesTitle": "Descubre cómo ayudamos a marcas líderes a acelerar su crecimiento",
+      "moreStories": "Descubre más historias",
+      "discoverImpact": "Descubre el impacto",
+      "driversKicker": "Rebel tech for audacious solvers",
+      "driversTitle": "¿Por qué quienes lideran ya están invirtiendo en tecnología?"
+    }
+  },
+  "govtech": {
+    "introH2": "Los gobiernos del futuro se construyen con datos seguros y decisiones inteligentes. Unimos tecnología y propósito para transformar la gestión pública.",
+    "strategyTitle": "Nuestra estrategia para la transformación digital",
+    "strategy": [
+      {
+        "title": "Consultoría y diseño estratégico",
+        "body": "Acompañamos a gobiernos y entidades públicas a definir su roadmap digital, desde la planificación hasta la implementación completa. Nos enfocamos en iniciativas que generen impacto, transparencia y eficiencia real sin perder foco en la seguridad de la información."
+      },
+      {
+        "title": "Desarrollo de plataformas y aplicaciones a medida",
+        "body": "Creamos soluciones digitales específicas para la gestión pública, la participación ciudadana y los servicios en línea. Combinamos tecnología avanzada con diseño centrado en las personas para simplificar procesos y mejorar la experiencia del usuario."
+      },
+      {
+        "title": "Integración tecnológica, datos inteligentes y seguridad garantizada",
+        "body": "Unificamos sistemas, fuentes de datos y servicios públicos en ecosistemas interoperables y seguros. Conectamos APIs, bases de datos, sensores y plataformas para impulsar la toma de decisiones basada en evidencia."
+      },
+      {
+        "title": "Modernización de sistemas",
+        "body": "Digitalizamos procesos y renovamos infraestructuras tecnológicas para acelerar la gestión pública. Reemplazamos sistemas obsoletos con soluciones ágiles y escalables, preparadas para el futuro digital y diseñadas con foco en la protección de datos."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "Transformando la gestión pública a la velocidad de la innovación",
+    "moreStories": "Descubre más historias",
+    "stories": [
+      {
+        "title": "Córdoba Govtech: Conectando innovación emprendedora con desafíos públicos reales"
+      },
+      {
+        "title": "KOGA: Transformación pública con mentalidad startup e innovación abierta"
+      },
+      {
+        "title": "LEGALIA: Inteligencia Artificial al servicio del derecho"
+      }
+    ],
+    "discoverImpact": "Descubre el impacto",
+    "ecoKicker": "Ecosistema de transformación",
+    "ecoTitle": "Formación para liderar el cambio",
+    "ecoBody": "Junto a Incutex, capacitamos equipos de gobierno para acelerar la adopción de IA y escalar soluciones govtech de alto impacto.",
+    "yesKicker": "Yes, It's Possible",
+    "yesTitle": "Reinventando los servicios públicos con soluciones GovTech",
+    "yesCta": "Comienza ahora",
+    "collabKicker": "Collaboration in Action",
+    "collabTitle": "Alianza con AI League para la innovación pública",
+    "collabP1": "A través de nuestra colaboración con AI League for Good, unimos fuerzas con expertos, instituciones y organismos públicos para explorar cómo la inteligencia artificial puede abordar desafíos reales del sector público.",
+    "collabP2": "Desde workshops hasta webinars, creamos espacios de aprendizaje y co-creación enfocados en la gobernanza inteligente, la innovación sostenible y los servicios centrados en la ciudadanía.",
+    "collabCta": "Conoce más",
+    "benefits": [
+      {
+        "title": "Eficiencia operativa optimizada",
+        "body": "Menos tiempo administrativo gracias a la automatización de procesos, permitiendo que el personal se enfoque en la prestación de servicios."
+      },
+      {
+        "title": "Transparencia y confianza pública",
+        "body": "Mayor confianza ciudadana mediante acceso a datos en tiempo real y herramientas de rendición de cuentas."
+      },
+      {
+        "title": "Reducción de costos",
+        "body": "Optimización presupuestaria con plataformas que reducen los costos por transacción y el mantenimiento a largo plazo."
+      },
+      {
+        "title": "Experiencia ciudadana premium",
+        "body": "Interfaces rápidas e intuitivas que elevan los servicios públicos al nivel de las mejores aplicaciones privadas."
+      },
+      {
+        "title": "Infraestructura preparada para el futuro",
+        "body": "Soluciones listas para integrar tecnologías avanzadas como IA, IoT y ecosistemas de ciudades inteligentes."
+      }
+    ]
+  }
+}

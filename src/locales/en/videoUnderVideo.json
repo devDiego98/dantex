@@ -1,0 +1,29 @@
+{
+  "videoUnderVideo": {
+    "sectionTitle": "Technology solution integration",
+    "explore": "Explore",
+    "exploreAria": "Explore {{title}}",
+    "items": {
+      "dataScience": {
+        "title": "Data science",
+        "desc": "Data turned into actionable insights and predictive models."
+      },
+      "devops": {
+        "title": "DevOps & FinOps",
+        "desc": "Faster delivery and optimized costs with modern practices."
+      },
+      "bim": {
+        "title": "BIM & digital twin",
+        "desc": "Models connected to operations so decisions use real context."
+      },
+      "cyber": {
+        "title": "Cybersecurity",
+        "desc": "Secure systems with end-to-end protection and compliance."
+      },
+      "design": {
+        "title": "Product design",
+        "desc": "Ideas turned into impactful products with human-centered design."
+      }
+    }
+  }
+}

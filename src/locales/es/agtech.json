@@ -1,0 +1,88 @@
+{
+  "agtech": {
+    "kicker": "Industrias · Agricultura",
+    "heroTitle": "Datos, IA y automatización para producir mejor en cada ciclo.",
+    "heroLead": "Conectamos sensores, maquinaria, imágenes satelitales y sistemas de gestión para tomar decisiones basadas en evidencia en todo el ciclo productivo.",
+    "ctaCall": "Agenda una conversación",
+    "ctaCases": "Ver casos de uso",
+    "whereTitle": "¿Dónde estás hoy?",
+    "whereHeadline": "¿Tu operación agrícola ya genera datos, pero todavía no genera decisiones mejores?",
+    "whereP1": "Muchas organizaciones ya cuentan con históricos de rinde, aplicaciones, clima y logística, pero esos datos viven en silos o planillas que nadie consulta a tiempo.",
+    "whereP2": "En Dantex ayudamos a conectar esas fuentes, diseñar modelos simples de predicción y llevar insights accionables al lugar donde se toman las decisiones: el lote, el equipo de planificación y la dirección del negocio.",
+    "impactKicker": "Impacto en el campo",
+    "impactHeadline": "Lo que buscamos destrabar en tu operación agrícola.",
+    "cards": [
+      {
+        "title": "Visibilidad diaria",
+        "body": "Paneles que muestran rinde, humedad y estado de cada lote sin abrir planillas."
+      },
+      {
+        "title": "Menos desperdicio",
+        "body": "Aplicaciones de insumos más precisas, basadas en datos históricos y pronósticos."
+      },
+      {
+        "title": "Operación predecible",
+        "body": "Alertas tempranas ante desvíos en riego, logística o clima."
+      },
+      {
+        "title": "Estrategia con evidencia",
+        "body": "Simulaciones de escenarios para decidir inversiones campaña a campaña."
+      }
+    ],
+    "satKicker": "Datos que se ven",
+    "satTitle": "De imágenes satelitales a decisiones de manejo por ambiente.",
+    "satBody": "Traducimos índices como NDVI, humedad y temperatura de suelo en recomendaciones concretas de manejo, integradas a tus sistemas actuales.",
+    "satCta": "Explorar cómo lo hacemos",
+    "solutionsKicker": "Soluciones agtech",
+    "solutionsTitle": "Casos de uso que construimos con nuestros clientes.",
+    "solutionsL1Strong": "Tableros de rinde y variabilidad:",
+    "solutionsL1Rest": "consolidan datos de años anteriores para definir ambientes y densidades.",
+    "solutionsL2Strong": "Modelos de pronóstico de producción:",
+    "solutionsL2Rest": "combinan clima, suelos y manejo para anticipar resultados.",
+    "solutionsL3Strong": "Monitoreo de maquinaria y logística:",
+    "solutionsL3Rest": "seguimiento en tiempo real para reducir tiempos muertos.",
+    "ecoKicker": "Ecosistema tecnológico",
+    "alliances": "Alianzas",
+    "alliancesTitle": "Trabajamos con los principales proveedores de nube, datos y hardware en el agro.",
+    "alliancesBody": "Integramos tu stack existente (ERP, plataformas de campo, proveedores de imágenes) sin forzar migraciones innecesarias.",
+    "workKicker": "Forma de trabajo",
+    "workTitle": "De un piloto concreto a una plataforma que escala.",
+    "workSteps": [
+      {
+        "title": "Diagnóstico con tu equipo",
+        "body": "Entendemos datos disponibles, decisiones críticas y restricciones de campo."
+      },
+      {
+        "title": "Piloto medible",
+        "body": "Definimos un caso de uso, un área de prueba y métricas claras de éxito."
+      },
+      {
+        "title": "Escalamiento responsable",
+        "body": "Llevamos la solución a más hectáreas y equipos, con foco en adopción."
+      }
+    ],
+    "stepWord": "Paso",
+    "contactKicker": "Conversemos",
+    "contactTitle": "¿Listo para explorar un caso de uso en tu operación?",
+    "contactLead": "Cuéntanos brevemente sobre tu cultivo, región y desafíos actuales. Un equipo especializado en agtech te responde en menos de 2 días hábiles.",
+    "formIntro": "Agenda una llamada con nuestro equipo de agtech.",
+    "nameLabel": "Nombre y apellido",
+    "namePh": "María Gómez",
+    "roleLabel": "Rol en la organización",
+    "rolePh": "Responsable de producción, CEO, etc.",
+    "emailLabel": "Email de contacto",
+    "emailPh": "tu@empresa.com",
+    "regionLabel": "País y región",
+    "regionPh": "Argentina · Córdoba, Brasil · Mato Grosso, etc.",
+    "exploreLabel": "¿Qué te gustaría explorar?",
+    "explorePh": "Contanos sobre tus cultivos, hectáreas, tecnologías actuales y desafíos que querés resolver.",
+    "submit": "Enviar mensaje",
+    "consent": "Al enviar este formulario aceptas ser contactado por nuestro equipo para coordinar la siguiente conversación.",
+    "expectTitle": "Qué puedes esperar de la primera llamada.",
+    "expect1": "• Revisión rápida de tu contexto y tecnologías actuales.",
+    "expect2": "• Identificación de 1–2 casos de uso con impacto medible.",
+    "expect3": "• Próximos pasos claros y tiempos estimados.",
+    "timeKicker": "Tiempo estimado",
+    "timeBody": "45 minutos para entender tu operación y definir un piloto viable."
+  }
+}

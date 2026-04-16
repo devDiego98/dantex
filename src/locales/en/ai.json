@@ -1,0 +1,92 @@
+{
+  "ai": {
+    "hero": {
+      "kicker": "Services",
+      "title": "Innovation & AI consulting",
+      "lead": "We design and implement AI solutions that scale with your business—from strategy and governance through product and operations integration—with measurable value and safe adoption.",
+      "contact": "Contact us",
+      "cases": "See cases"
+    },
+    "ecosystem": {
+      "title": "Our AI ecosystem",
+      "lead": "An integrated set of capabilities, tools, and practices to bring generative and advanced analytics models to production with quality and compliance.",
+      "play": "Play video",
+      "overlayTitle": "AI-Powered Ecosystem"
+    },
+    "servicesGrid": {
+      "title": "Integrating AI across…",
+      "lead": "Concrete use cases where we accelerate outcomes with multidisciplinary teams.",
+      "learnMore": "Learn more",
+      "cards": [
+        {
+          "title": "Retail",
+          "description": "Personalization, demand, and store operations powered by real-time models."
+        },
+        {
+          "title": "Healthcare",
+          "description": "Clinical assistants, triage, and assisted analytics—with privacy and compliance built in."
+        },
+        {
+          "title": "Finance",
+          "description": "Fraud detection, scoring, and document automation with traceability."
+        },
+        {
+          "title": "Industry",
+          "description": "Predictive maintenance, computer vision, and connected digital twins."
+        }
+      ]
+    },
+    "midCta": {
+      "text": "Ready to start your AI journey?",
+      "cta": "Contact us"
+    },
+    "partner": {
+      "title": "Empowering AI with cutting-edge technology",
+      "body": "We combine product and data expertise with industry-leading training and acceleration platforms—shortening the path from experimentation to production inference, with infrastructure ready for demanding workloads and teams who master the full stack."
+    },
+    "logoCloud": {
+      "title": "Technology & partnerships"
+    },
+    "whyUs": {
+      "title": "Why choose us to lead your digital transformation?",
+      "lead": "We’re a product and technology partner—we align executive leadership, data teams, and delivery squads so AI stops being a one-off experiment and becomes recurring business capability.",
+      "features": [
+        {
+          "title": "Technical depth",
+          "body": "ML architects, MLOps, and software engineers who’ve shipped models at scale in regulated environments."
+        },
+        {
+          "title": "Business focus",
+          "body": "We prioritize initiatives by impact—clear metrics, ownership, and a realistic roadmap."
+        },
+        {
+          "title": "Governance & trust",
+          "body": "Privacy, security, and responsible AI baked into design—not bolted on later."
+        },
+        {
+          "title": "Speed with rigor",
+          "body": "Short validation cycles with engineering quality: tests, observability, and rollback."
+        }
+      ]
+    },
+    "caseStudy": {
+      "title": "How we helped a leading company industrialize its internal copilot",
+      "body": "We unified knowledge sources, defined usage policies, and shipped an assistant connected to transactional systems—cutting support response time and speeding remote team onboarding.",
+      "cta": "View case study"
+    },
+    "contact": {
+      "title": "Let’s talk about your next project",
+      "lead": "Tell us your context and we’ll reply with next steps and a no-strings initial approach.",
+      "name": "Name",
+      "namePh": "Your name",
+      "company": "Company",
+      "companyPh": "Company",
+      "email": "Email",
+      "emailPh": "name@company.com",
+      "message": "Message",
+      "messagePh": "Goals, timelines, or constraints we should know",
+      "submit": "Send",
+      "linkedin": "LinkedIn"
+    }
+  }
+}

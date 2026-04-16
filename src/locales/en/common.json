@@ -1,0 +1,40 @@
+{
+  "language": {
+    "es": "Español",
+    "en": "English",
+    "label": "Language"
+  },
+  "nav": {
+    "services": "Services",
+    "industries": "Industries",
+    "insights": "Insights",
+    "community": "Community",
+    "contact": "Contact us"
+  },
+  "footer": {
+    "credit": "Built by dantexgroup © 2026",
+    "privacy": "Privacy policy",
+    "sgi": "SGI policy"
+  },
+  "layout": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navDialog": "Navigation menu",
+    "mainNav": "Main"
+  },
+  "industryContact": {
+    "title": "Let’s build solutions with real impact",
+    "formLead": "Complete the form to connect with our team.",
+    "formFollowUp": "A Dantex specialist will reach out to understand your needs and explore collaboration opportunities.",
+    "pillarConnect": "Connect program",
+    "pillarInnovation": "Innovation",
+    "pillarQuality": "Quality and security",
+    "pillarSustainability": "Sustainable commitment",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "role": "Role",
+    "email": "Email",
+    "projectMessage": "Tell us about your project",
+    "submit": "Connect with our team"
+  }
+}

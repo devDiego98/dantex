@@ -1,0 +1,29 @@
+{
+  "videoUnderVideo": {
+    "sectionTitle": "Integración de soluciones tecnológicas",
+    "explore": "Explorar",
+    "exploreAria": "Explorar {{title}}",
+    "items": {
+      "dataScience": {
+        "title": "Data Science",
+        "desc": "Datos transformados en insights accionables y modelos predictivos."
+      },
+      "devops": {
+        "title": "DevOps y FinOps",
+        "desc": "Delivery acelerado y costos optimizados con prácticas modernas."
+      },
+      "bim": {
+        "title": "BIM y Gemelo Digital",
+        "desc": "Modelos conectados a la operación para decidir con contexto real."
+      },
+      "cyber": {
+        "title": "Ciberseguridad",
+        "desc": "Sistemas seguros con protección integral y cumplimiento normativo."
+      },
+      "design": {
+        "title": "Diseño de Producto",
+        "desc": "Ideas convertidas en productos de impacto con diseño centrado en el usuario."
+      }
+    }
+  }
+}

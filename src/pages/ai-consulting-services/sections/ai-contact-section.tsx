@@ -17,11 +17,11 @@ export function AiContactSection() {
           </p>
           <div className="mt-8 space-y-3 text-sm text-teal-50/95">
             <a
-              href="mailto:contacto@santexgroup.com"
+              href=""
               className="flex items-center gap-2 transition hover:text-white"
             >
               <Mail className="size-4 shrink-0" aria-hidden />
-              contacto@santexgroup.com
+              fe.dev.diego@gmail.com
             </a>
             <a href="#" className="transition hover:text-white">
               LinkedIn

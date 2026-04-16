@@ -1,0 +1,243 @@
+{
+  "pageNvidia": {
+    "healthcare": "Explore and implement Generative AI, Computer Vision, and ML solutions that streamline processes, improve care delivery, and enable smarter systems across healthcare.",
+    "foodtech": "Boost productivity and operational efficiency—and automate your restaurant operations with Dantex.",
+    "govtech": "We implement AI solutions that modernize institutions, enable data-driven decisions, and foster sustainable public innovation."
+  },
+  "finance": {
+    "hero": {
+      "kicker": "Industries · Finance",
+      "titleLine1": "Financial solutions built",
+      "titleLine2": "for the future",
+      "lead": "We help companies transform operations and build tailored financial solutions.",
+      "cta": "Accelerate your future",
+      "highlights": ["Security", "Product", "Core banking"]
+    },
+    "services": {
+      "headline": "From digital wallets to lending platforms, AI has transformed finance. With Dantex, scale securely and innovate faster.",
+      "subhead": "Financial services",
+      "cards": [
+        {
+          "title": "Customer acquisition portals",
+          "body": "Attract users with simulations, tools, and tailored content that build trust and support informed decisions."
+        },
+        {
+          "title": "Onboarding solutions",
+          "body": "Secure, automated onboarding with identity validation, risk assessments, and compliance built into every step."
+        },
+        {
+          "title": "End-to-end product development",
+          "body": "Design, customize, and launch financial products at scale with cloud platforms and microservices architectures."
+        },
+        {
+          "title": "Secure financial operations",
+          "body": "Protect transactions with strong protocols, fraud detection, and access management across systems."
+        },
+        {
+          "title": "Optimized, efficient operations",
+          "body": "Modernize architectures, automate back-office processes, and strengthen resilience for profitable performance."
+        },
+        {
+          "title": "Customer lifecycle management",
+          "body": "Deliver smooth experiences from acquisition to retention with platforms and AI-driven engagement."
+        },
+        {
+          "title": "From data strategy to AI at scale",
+          "body": "Turn data into impact with analytics and AI/ML models running in production environments."
+        }
+      ]
+    },
+    "stories": {
+      "kicker": "From Potential to Impact",
+      "title": "See how we transform financial solutions",
+      "more": "Discover more stories",
+      "discoverImpact": "See the impact",
+      "items": [
+        {
+          "title": "Transforming financial content management at scale"
+        },
+        {
+          "title": "F.A.S.T. — Fiscal intelligence with generative AI"
+        },
+        {
+          "title": "Wibond: The all-in-one virtual wallet for secure, efficient transactions"
+        }
+      ]
+    },
+    "experience": {
+      "title": "FinTech & banking experience",
+      "lead": "We know how to create value with a strategic lens.",
+      "tags": [
+        "Innovation in payments & lending",
+        "Modernizing banks & FinTechs",
+        "Customer experience & personalized finance",
+        "Secure, AI-powered finance"
+      ],
+      "valueProps": [
+        {
+          "title": "Tailored solutions",
+          "body": "We design solutions for both financial institutions and non-financial companies, accelerating their growth."
+        },
+        {
+          "title": "Faster delivery, powered by AI",
+          "body": "AI-optimized engineering that speeds processes, cuts costs, and reduces time-to-market."
+        },
+        {
+          "title": "Proven experience",
+          "body": "We’ve built platforms for payments, lending, and investments—working with FinTechs, banks, and cross-industry players."
+        },
+        {
+          "title": "Security & compliance",
+          "body": "Bank-grade protocols, fraud detection, and regulatory compliance that meet the highest standards in every project."
+        },
+        {
+          "title": "Measured impact",
+          "body": "With 95% retention, 94% loyalty, and an NPS of 86, our track record shows real, measurable impact worldwide."
+        }
+      ]
+    },
+    "nvidia": {
+      "body": "Improve efficiency, reduce risk, and accelerate transformation with AI solutions designed for financial services."
+    }
+  },
+  "foodtech": {
+    "solutions": [
+      {
+        "title": "Smart ordering & payments",
+        "body": "Frictionless, AI-personalized purchase experiences. Secure mobile POS integrations that lift satisfaction and revenue."
+      },
+      {
+        "title": "Integrations",
+        "body": "Unify delivery platforms, POS, loyalty, and ERP with robust integrations—scalable and operationally efficient."
+      },
+      {
+        "title": "AI & automation",
+        "body": "AI chatbots, predictive analytics, and automation to streamline kitchen flows, cut wait times, and improve ops decisions."
+      },
+      {
+        "title": "Inventory & data management",
+        "body": "Real-time stock visibility, automated replenishment, and less waste with data-driven supply chain insights."
+      },
+      {
+        "title": "Kiosk & self-service",
+        "body": "Raise average ticket with interactive kiosks built for fast, efficient QSR self-service."
+      },
+      {
+        "title": "Franchise systems",
+        "body": "Empower franchise operators with standardized processes, performance tracking, and consistency across locations."
+      },
+      {
+        "title": "UX/UI & quality",
+        "body": "Fluid digital experiences with human-centered design, rigorous testing, and performance tuning for accessibility and engagement."
+      }
+    ],
+    "stories": [
+      {
+        "title": "How Dantex transformed data insights for the world’s fifth-largest fast-food operator"
+      },
+      {
+        "title": "Optimizing store layout and food safety with AI-powered video recognition"
+      },
+      {
+        "title": "Firehouse turns to Dantex for safer, smarter, seamless payments"
+      }
+    ],
+    "drivers": [
+      {
+        "title": "Faster AI adoption",
+        "body": "We help ops and product teams embed AI in real restaurant workflows—with measurable value."
+      },
+      {
+        "title": "Less waste",
+        "body": "Automating inventory and demand forecasts helps cut spoilage and ingredient costs."
+      },
+      {
+        "title": "Higher sales",
+        "body": "Digital ordering, personalization, and smooth payments lift conversion and average ticket."
+      }
+    ],
+    "sections": {
+      "visionKicker": "Yes, It's Possible",
+      "visionTitle": "Our vision in action",
+      "visionLead": "Increase productivity and operational efficiency for your restaurant with Dantex.",
+      "visionCta": "Learn more",
+      "solutionsHeader": "Solutions for restaurants",
+      "storiesKicker": "From Potential to Impact",
+      "storiesTitle": "See how we help leading brands accelerate growth",
+      "moreStories": "Discover more stories",
+      "discoverImpact": "See the impact",
+      "driversKicker": "Rebel tech for audacious solvers",
+      "driversTitle": "Why leaders are already investing in technology"
+    }
+  },
+  "govtech": {
+    "introH2": "Tomorrow’s governments are built on secure data and smart decisions. We unite technology and purpose to transform public management.",
+    "strategyTitle": "Our strategy for digital transformation",
+    "strategy": [
+      {
+        "title": "Strategic consulting & design",
+        "body": "We help governments and public entities define a digital roadmap—from planning through full implementation—prioritizing impact, transparency, and efficiency without losing sight of information security."
+      },
+      {
+        "title": "Custom platforms & applications",
+        "body": "We build digital solutions for public management, civic participation, and online services—pairing advanced tech with human-centered design."
+      },
+      {
+        "title": "Technology integration, smart data, guaranteed security",
+        "body": "We unify systems, data sources, and public services into interoperable, secure ecosystems—APIs, databases, sensors, and platforms for evidence-based decisions."
+      },
+      {
+        "title": "Systems modernization",
+        "body": "We digitize processes and renew technology infrastructure to accelerate public management—replacing legacy systems with agile, scalable, future-ready solutions focused on data protection."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "Transforming public management at the speed of innovation",
+    "moreStories": "Discover more stories",
+    "stories": [
+      {
+        "title": "Córdoba GovTech: Connecting startup innovation with real public challenges"
+      },
+      {
+        "title": "KOGA: Public transformation with a startup mindset and open innovation"
+      },
+      {
+        "title": "LEGALIA: Artificial intelligence in service of law"
+      }
+    ],
+    "discoverImpact": "See the impact",
+    "ecoKicker": "Transformation ecosystem",
+    "ecoTitle": "Training to lead change",
+    "ecoBody": "Together with Incutex, we train government teams to accelerate AI adoption and scale high-impact GovTech solutions.",
+    "yesKicker": "Yes, It's Possible",
+    "yesTitle": "Reinventing public services with GovTech solutions",
+    "yesCta": "Get started",
+    "collabKicker": "Collaboration in Action",
+    "collabTitle": "Partnership with AI League for public innovation",
+    "collabP1": "Through our collaboration with AI League for Good, we join experts, institutions, and public bodies to explore how AI can tackle real public-sector challenges.",
+    "collabP2": "From workshops to webinars, we create learning and co-creation spaces focused on smart governance, sustainable innovation, and citizen-centered services.",
+    "collabCta": "Learn more",
+    "benefits": [
+      {
+        "title": "Optimized operational efficiency",
+        "body": "Less administrative time through automation—so teams can focus on service delivery."
+      },
+      {
+        "title": "Transparency & public trust",
+        "body": "Greater citizen trust with real-time data access and accountability tools."
+      },
+      {
+        "title": "Cost reduction",
+        "body": "Budget optimization with platforms that lower per-transaction costs and long-term maintenance."
+      },
+      {
+        "title": "Premium citizen experience",
+        "body": "Fast, intuitive interfaces that rival the best private apps."
+      },
+      {
+        "title": "Future-ready infrastructure",
+        "body": "Solutions ready to integrate AI, IoT, and smart-city ecosystems."
+      }
+    ]
+  }
+}

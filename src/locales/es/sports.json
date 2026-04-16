@@ -1,0 +1,69 @@
+{
+  "sports": {
+    "hero": {
+      "kicker": "Industrias · Deportes & Entretenimiento",
+      "title": "Game-Changing tech para experiencias más conectadas",
+      "lead": "Potencia el engagement de los fans, optimiza el rendimiento y abre nuevas oportunidades de negocio.",
+      "cta": "Potencia tu juego",
+      "highlights": [
+        "Fans & engagement",
+        "Alto rendimiento",
+        "OTT & entretenimiento"
+      ]
+    },
+    "introH2": "Construimos la infraestructura digital que impulsa la industria del deporte moderno.",
+    "introP": "Desde experiencias en grandes estadios hasta herramientas de performance basadas en datos. Desarrollamos ecosistemas para la intensidad de la competencia en vivo y la complejidad de la industria global del entretenimiento.",
+    "dantexWay": "The Dantex Way",
+    "globalTitle": "Tecnología para el deporte a escala global",
+    "globalTech": [
+      {
+        "title": "Inteligencia de Datos y Operaciones",
+        "body": "Transformamos datos fragmentados en valor. Generamos insights accionables y automatizamos procesos para monetizar los datos de fans de forma segura y en tiempo real."
+      },
+      {
+        "title": "Tecnología de Rendimiento Aplicada",
+        "body": "Foco en la precisión. Creamos herramientas de rendimiento, desde seguimiento de atletas hasta retail. Nuestra IA entrega métricas profesionales a deportistas y usuarios."
+      },
+      {
+        "title": "Infraestructura Escalable y en Tiempo Real",
+        "body": "Sistemas de alta confiabilidad para alta concurrencia. Diseñamos infraestructuras para estadios inteligentes y OTT, garantizando streaming fluido y engagement en eventos masivos."
+      },
+      {
+        "title": "Plataformas de Entretenimiento de Próxima Generación",
+        "body": "Modernizamos sistemas heredados en núcleos ágiles. Desarrollamos e-commerce y membresías premium que potencian la UX y la fidelidad a largo plazo."
+      }
+    ],
+    "platformTitle": "Impulsando plataformas deportivas de alto rendimiento",
+    "platformLead": "Aseguramos que tu core digital sea resiliente, seguro y esté preparado para la próxima generación del entretenimiento.",
+    "engineering": [
+      {
+        "title": "IA Agéntica e IA Generativa",
+        "body": "Automatización de flujos de trabajo e hiper-personalización del fan journey."
+      },
+      {
+        "title": "Modernización de Infra",
+        "body": "Migración de sistemas deportivos heredados a arquitecturas cloud-native sin interrumpir las operaciones en vivo."
+      },
+      {
+        "title": "Estrategia Digital Unificada",
+        "body": "Alineación de integraciones con objetivos comerciales y operativos."
+      },
+      {
+        "title": "Ingeniería de Alto Rendimiento",
+        "body": "Sistemas escalables para OTT, cloud gaming y transmisión global."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "Así se transforma el juego",
+    "moreStories": "Explora Historias de Impacto",
+    "readStory": "Leer historia",
+    "stories": [
+      {
+        "title": "Cuando la innovación digital juega al nivel de los mejores del mundo"
+      },
+      {
+        "title": "Talleres y Dantex: Transformación Digital para la Eficiencia Institucional"
+      }
+    ]
+  }
+}

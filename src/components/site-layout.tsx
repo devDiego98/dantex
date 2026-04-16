@@ -1,11 +1,20 @@
-import { useEffect, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Globe } from "lucide-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 import { DotGridBackground } from "@/components/dot-grid-background";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import {
+  getIndustriasNavItems,
+  getServiciosNavItems,
   MegaMenuComunidad,
   MegaMenuIndustrias,
   MegaMenuInsights,
@@ -19,13 +28,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-
-const navItems = [
-  { label: "Servicios", href: "/#servicios" },
-  { label: "Industrias", href: "/#industrias" },
-  { label: "Insights", href: "/#insights" },
-  { label: "Comunidad", href: "/#comunidad" },
-];
 
 function SocialIcon({
   name,
@@ -94,18 +96,73 @@ function ScrollToTop() {
 const NAV_SCROLL_THRESHOLD = 20;
 
 export function SiteLayout() {
+  const { t } = useTranslation();
   const { pathname } = useLocation();
+  const serviciosItems = useMemo(() => getServiciosNavItems(t), [t]);
+  const industriasItems = useMemo(() => getIndustriasNavItems(t), [t]);
+  const navItems = useMemo(
+    () =>
+      [
+        {
+          label: t("nav.services"),
+          href: "/#servicios",
+          disabled: false,
+          accordion: "servicios" as const,
+        },
+        {
+          label: t("nav.industries"),
+          href: "/#industrias",
+          disabled: false,
+          accordion: "industrias" as const,
+        },
+        { label: t("nav.insights"), href: "/#insights", disabled: true },
+        { label: t("nav.community"), href: "/#comunidad", disabled: true },
+      ] as const,
+    [t]
+  );
   const [navVisible, setNavVisible] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState<
+    null | "servicios" | "industrias"
+  >(null);
   const { scrollY } = useScroll();
 
+  const closeMobileMenu = useCallback(() => {
+    setMobileMenuOpen(false);
+    setMobileAccordion(null);
+  }, []);
+
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setNavVisible(latest < NAV_SCROLL_THRESHOLD);
+    const visible = latest < NAV_SCROLL_THRESHOLD;
+    setNavVisible(visible);
+    if (!visible) closeMobileMenu();
   });
 
   useEffect(() => {
-    const y = window.scrollY;
-    setNavVisible(y < NAV_SCROLL_THRESHOLD);
-  }, [pathname]);
+    queueMicrotask(() => {
+      const y = window.scrollY;
+      setNavVisible(y < NAV_SCROLL_THRESHOLD);
+      closeMobileMenu();
+    });
+  }, [pathname, closeMobileMenu]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMobileMenu();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mobileMenuOpen, closeMobileMenu]);
 
   return (
     <div className="relative min-h-screen overflow-x-clip text-foreground">
@@ -126,87 +183,252 @@ export function SiteLayout() {
         transition={{ type: "spring", stiffness: 420, damping: 40, mass: 0.8 }}
         aria-hidden={!navVisible}
       >
-        <div className="flex w-full max-w-5xl items-center justify-between gap-4 rounded-full border border-white/10 bg-black/40 px-4 py-3 shadow-lg shadow-black/25 backdrop-blur-md sm:px-6">
-          <Link to="/" className="flex items-center gap-2.5 text-white">
+        <div className="flex w-full max-w-5xl items-center justify-between gap-3 rounded-full border border-white/10 bg-black/40 px-4 py-3 shadow-lg shadow-black/25 backdrop-blur-md sm:gap-4 sm:px-6">
+          <Link
+            to="/"
+            className="flex shrink-0 items-center gap-2.5 text-white"
+          >
             <span className="flex size-9 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-sm font-semibold tracking-tight">
-              S
+              D
             </span>
-            <span className="text-lg font-semibold tracking-tight">santex</span>
+            <span className="text-lg font-semibold tracking-tight">dantex</span>
           </Link>
 
-          <nav
-            className="font-chakra flex flex-1 flex-wrap justify-center gap-x-4 gap-y-1 text-sm font-medium text-white/80 lg:hidden"
-            aria-label="Principal"
-          >
-            {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="hover:text-white">
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          <div className="flex-1 lg:hidden" aria-hidden />
 
-          <NavigationMenu
-            className="hidden max-w-none font-chakra lg:block"
-            delay={100}
-            closeDelay={200}
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            className="shrink-0 text-white/90 hover:bg-white/10 hover:text-white lg:hidden"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-site-nav"
+            aria-label={t("layout.openMenu")}
+            onClick={() => setMobileMenuOpen(true)}
           >
-            <NavigationMenuList className="flex flex-wrap items-center gap-0.5">
-              <NavigationMenuItem value="servicios">
-                <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
-                  Servicios
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="p-0 font-chakra">
-                  <MegaMenuServicios />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem value="industrias">
-                <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
-                  Industrias
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="p-0 font-chakra">
-                  <MegaMenuIndustrias />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem value="insights">
-                <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
-                  Insights
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="p-0 font-chakra">
-                  <MegaMenuInsights />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem value="comunidad">
-                <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
-                  Comunidad
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="p-0 font-chakra">
-                  <MegaMenuComunidad />
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+            <Menu className="size-6" aria-hidden />
+          </Button>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white/80 hover:bg-white/10 hover:text-white"
-              aria-label="Idioma"
+          <div className="hidden min-w-0 flex-1 justify-center lg:flex">
+            <NavigationMenu
+              className="max-w-none font-chakra"
+              delay={100}
+              closeDelay={200}
             >
-              <Globe className="size-5" />
-            </Button>
+              <NavigationMenuList className="flex flex-wrap items-center gap-0.5">
+                <NavigationMenuItem value="servicios">
+                  <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
+                    {t("nav.services")}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="p-0 font-chakra">
+                    <MegaMenuServicios />
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem value="industrias">
+                  <NavigationMenuTrigger className="font-chakra h-9 bg-transparent px-3 text-sm font-medium text-white/85 hover:bg-white/10 hover:text-white data-open:bg-white/10 data-open:text-white">
+                    {t("nav.industries")}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="p-0 font-chakra">
+                    <MegaMenuIndustrias />
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem value="insights">
+                  <NavigationMenuTrigger
+                    disabled
+                    className="font-chakra h-9 cursor-not-allowed bg-transparent px-3 text-sm font-medium text-white/35 hover:bg-transparent hover:text-white/35 data-open:bg-transparent data-open:text-white/35"
+                  >
+                    {t("nav.insights")}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="p-0 font-chakra">
+                    <MegaMenuInsights />
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem value="comunidad">
+                  <NavigationMenuTrigger
+                    disabled
+                    className="font-chakra h-9 cursor-not-allowed bg-transparent px-3 text-sm font-medium text-white/35 hover:bg-transparent hover:text-white/35 data-open:bg-transparent data-open:text-white/35"
+                  >
+                    {t("nav.community")}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="p-0 font-chakra">
+                    <MegaMenuComunidad />
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+
+          <div className="hidden items-center gap-2 sm:gap-3 lg:flex">
+            <LanguageSwitcher />
             <Button className="rounded-full bg-white px-5 text-sm font-medium text-zinc-900 hover:bg-white/90">
-              Contáctanos
+              {t("nav.contact")}
             </Button>
           </div>
         </div>
       </motion.header>
 
+      <AnimatePresence>
+        {mobileMenuOpen ? (
+          <motion.div
+            className="fixed inset-0 z-[110] flex flex-col p-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t("layout.navDialog")}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <button
+              type="button"
+              className="absolute inset-0 bg-black/55 backdrop-blur-[2px]"
+              aria-label={t("layout.closeMenu")}
+              onClick={closeMobileMenu}
+            />
+            <motion.div
+              id="mobile-site-nav"
+              className="relative z-[1] flex max-h-[min(100dvh-1.5rem,44rem)] w-full max-w-lg flex-1 flex-col self-center overflow-hidden rounded-2xl border border-emerald-400/35 bg-[#050d0d] shadow-[0_0_0_1px_rgba(45,120,120,0.12),0_24px_80px_rgba(0,0,0,0.65)] sm:rounded-3xl"
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.99 }}
+              transition={{ type: "spring", stiffness: 380, damping: 32 }}
+            >
+              <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-4 sm:px-5">
+                <Link
+                  to="/"
+                  className="flex items-center gap-2.5 text-white"
+                  onClick={closeMobileMenu}
+                >
+                  <span className="flex size-9 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-sm font-semibold tracking-tight">
+                    D
+                  </span>
+                  <span className="text-lg font-semibold tracking-tight">
+                    dantex
+                  </span>
+                </Link>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  className="text-white/90 hover:bg-white/10 hover:text-white"
+                  aria-label={t("layout.closeMenu")}
+                  onClick={closeMobileMenu}
+                >
+                  <X className="size-6" aria-hidden />
+                </Button>
+              </div>
+
+              <nav
+                className="font-chakra min-h-0 flex-1 overflow-y-auto overscroll-contain px-1 py-2 sm:px-2"
+                aria-label={t("layout.mainNav")}
+              >
+                <ul className="divide-y divide-white/[0.06]">
+                  {navItems.map((item) => (
+                    <li key={item.label}>
+                      {item.disabled ? (
+                        <span
+                          className="flex w-full items-center gap-3 px-4 py-4 text-[15px] font-medium tracking-wide text-white/35 sm:px-5"
+                          aria-disabled="true"
+                        >
+                          <span className="flex-1">{item.label}</span>
+                          <ChevronRight
+                            className="size-5 shrink-0 text-white/20"
+                            aria-hidden
+                          />
+                        </span>
+                      ) : (
+                        <div>
+                          <button
+                            type="button"
+                            className="flex w-full items-center gap-3 px-4 py-4 text-left text-[15px] font-medium tracking-wide text-white transition-colors hover:bg-white/[0.04] active:bg-white/[0.06] sm:px-5"
+                            aria-expanded={mobileAccordion === item.accordion}
+                            aria-controls={`mobile-${item.accordion}-subnav`}
+                            id={`mobile-${item.accordion}-trigger`}
+                            onClick={() =>
+                              setMobileAccordion((cur) =>
+                                cur === item.accordion ? null : item.accordion
+                              )
+                            }
+                          >
+                            <span className="flex-1">{item.label}</span>
+                            <ChevronDown
+                              className={cn(
+                                "size-5 shrink-0 text-white/60 transition-transform duration-200",
+                                mobileAccordion === item.accordion &&
+                                  "rotate-180"
+                              )}
+                              aria-hidden
+                            />
+                          </button>
+                          {mobileAccordion === item.accordion ? (
+                            <ul
+                              id={`mobile-${item.accordion}-subnav`}
+                              className="border-t border-white/[0.06] bg-black/30 px-2 py-2 sm:px-3"
+                              role="list"
+                              aria-labelledby={`mobile-${item.accordion}-trigger`}
+                            >
+                              {(item.accordion === "servicios"
+                                ? serviciosItems
+                                : industriasItems
+                              ).map(({ label, href, icon: Icon }) => (
+                                <li key={href}>
+                                  <Link
+                                    to={href}
+                                    className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-[14px] font-medium text-white/90 transition-colors hover:bg-white/[0.06] active:bg-white/[0.08] sm:px-4"
+                                    onClick={closeMobileMenu}
+                                  >
+                                    <Icon
+                                      className="size-5 shrink-0 text-white/70"
+                                      aria-hidden
+                                    />
+                                    <span className="flex-1">{label}</span>
+                                    <ChevronRight
+                                      className="size-4 shrink-0 text-white/35"
+                                      aria-hidden
+                                    />
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] px-4 py-4 sm:px-5">
+                <Button
+                  className="rounded-full bg-white px-5 text-sm font-medium text-teal-950 shadow-sm hover:bg-white/90"
+                  onClick={closeMobileMenu}
+                >
+                  {t("nav.contact")}
+                </Button>
+                <LanguageSwitcher
+                  variant="mobile"
+                  className="w-full sm:w-auto"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+
       <div className="relative z-10 mx-auto flex min-h-screen flex-col  pb-10 pt-0 ">
         <Outlet />
 
         <footer className="mt-auto flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-10 text-sm text-zinc-500 sm:flex-row px-16">
-          <p>Desarrollado por santexgroup © 2026</p>
+          <p>
+            Desarrollado por{" "}
+            <a
+              href="linkedin.com/in/devdiego1"
+              className="text-gray-300 hover:text-gray-100"
+            >
+              Diego Perez
+            </a>{" "}
+            © 2026
+          </p>
           <div className="flex items-center gap-5 text-zinc-400">
             <a
               href="#"
@@ -239,10 +461,10 @@ export function SiteLayout() {
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             <a href="#" className="hover:text-zinc-300">
-              Política de privacidad
+              {t("footer.privacy")}
             </a>
             <a href="#" className="hover:text-zinc-300">
-              Política de SGI
+              {t("footer.sgi")}
             </a>
           </div>
         </footer>

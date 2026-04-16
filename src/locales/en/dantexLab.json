@@ -1,0 +1,140 @@
+{
+  "dantexLab": {
+    "fabAria": "Open chat",
+    "hero": {
+      "title": "Your ideas are strategic—and ready to scale",
+      "lead": "We help leading teams turn vision into AI products—with rigor, speed, and governance.",
+      "cta": "Let’s talk about your ideas"
+    },
+    "agile": {
+      "kicker": "HOW WE CAN WORK TOGETHER",
+      "title": "Five stages:",
+      "titleAccent": "Agile and modular",
+      "prev": "Previous",
+      "next": "Next",
+      "stages": [
+        {
+          "title": "Strategic vision",
+          "body": "We align AI strategy with business goals and assess readiness across leadership, data, talent, and culture.",
+          "note": "Not sure your company is ready for AI? This phase gives clarity to start focused and build toward a solid strategy."
+        },
+        {
+          "title": "Viability analysis",
+          "body": "Identify and prioritize high-impact use cases. We validate opportunities, data readiness, technical fit, and projected return.",
+          "note": "When everything feels urgent, it’s hard to know where to start. We help you focus on what’s valuable and feasible now."
+        },
+        {
+          "title": "Prototype",
+          "body": "We build an MVP in weeks to validate with real users, metrics, and quality guardrails.",
+          "note": "We reduce uncertainty fast: prototypes that learn, measure, and show value without risking operations."
+        },
+        {
+          "title": "Validation",
+          "body": "We iterate with stakeholder feedback, tests, and observability to harden the product before scaling.",
+          "note": "We ensure performance, security, and experience before investing in operations and rollout."
+        },
+        {
+          "title": "Scale",
+          "body": "We standardize MLOps, governance, and operations to grow smoothly—with internal teams or Dantex squads.",
+          "note": "We move from “it works” to “it always works”: monitoring, cost, compliance, and continuous improvement."
+        }
+      ]
+    },
+    "objectives": {
+      "title": "Your goals, amplified by our experience",
+      "bullets": [
+        "Senior squads with experience across product, data, and AI engineering.",
+        "Governance and security frameworks aligned to enterprise standards.",
+        "Architecture and MLOps designed to evolve without hidden technical debt."
+      ],
+      "imageAlt": "Team collaborating with notes on a glass board"
+    },
+    "packages": {
+      "title": "Smart packages to define your next AI move",
+      "lead": "Choose the pace and depth that fit your context—from strategic clarity to a continuous innovation hub.",
+      "cta": "See all packages",
+      "items": [
+        {
+          "name": "Discovery Venture",
+          "points": [
+            "Alignment workshop and opportunity map",
+            "Data and risk assessment",
+            "Executive brief on next steps"
+          ]
+        },
+        {
+          "name": "AI Sprint",
+          "points": [
+            "A working prototype in weeks—not months",
+            "Prompt design, evaluation, and traceability",
+            "Demo with quality and adoption metrics"
+          ]
+        },
+        {
+          "name": "AI Innovation Hub",
+          "points": [
+            "Co-creation with your product team",
+            "Multi-release roadmap and training",
+            "Handover option or Dantex extension"
+          ]
+        }
+      ]
+    },
+    "caseStudies": {
+      "title": "Real stories powered by Lab sessions",
+      "readMore": "Read more",
+      "cases": [
+        {
+          "title": "From scattered data to an operational copilot in retail",
+          "alt": "Professional reviewing data dashboards"
+        },
+        {
+          "title": "Clinical assistant with privacy-by-design controls",
+          "alt": "Healthcare and technology context"
+        },
+        {
+          "title": "Intelligent automation in a global logistics chain",
+          "alt": "Operations and logistics"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Answers to your strategic questions",
+      "lead": "Transparency from day one: scope, risks, and realistic expectations about what AI can deliver for your business.",
+      "items": [
+        {
+          "q": "How long does a typical Lab engagement take?",
+          "a": "It depends on the package—from a two-week sprint to multi-month programs with biweekly deliveries and shared governance."
+        },
+        {
+          "q": "Do you work with our stack and cloud provider?",
+          "a": "Yes. We integrate with AWS, Azure, and GCP—and respect your organization’s identity, networking, and secrets policies."
+        },
+        {
+          "q": "How do you protect sensitive data and IP?",
+          "a": "We use confidentiality agreements, isolated environments when needed, and no-retention processing options depending on the use case."
+        },
+        {
+          "q": "What should we prepare before the first session?",
+          "a": "A business sponsor, access to high-level product/data documentation, and a prioritized list of questions or hypotheses."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Let’s build AI solutions with real impact",
+      "quote": "“The Lab helped us prioritize three use cases with clear ROI—and a prototype now in pilot with customers.”",
+      "name": "Name",
+      "namePh": "Your name",
+      "company": "Company",
+      "companyPh": "Company",
+      "email": "Email",
+      "emailPh": "name@company.com",
+      "message": "Message",
+      "messagePh": "Tell us about your initiative or challenge",
+      "submit": "Send"
+    },
+    "partners": {
+      "title": "Technology partners"
+    }
+  }
+}

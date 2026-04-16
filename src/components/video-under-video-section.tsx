@@ -1,55 +1,46 @@
 import type { ComponentType } from "react";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import BimSvg from "@/svgs/bim";
 import ChromeSvg from "@/svgs/chrome";
 import CybersecuritySvg from "@/svgs/cybersecurity";
 import DesignSvg from "@/svgs/design";
 import DevopsSvg from "@/svgs/devops";
 
-type Item = {
-  title: string;
-  description: string;
-  Icon: ComponentType<{ className?: string }>;
-};
-
-const items: readonly Item[] = [
-  {
-    title: "Data Science",
-    description:
-      "Datos transformados en insights accionables y modelos predictivos.",
-    Icon: ChromeSvg,
-  },
-  {
-    title: "DevOps y FinOps",
-    description:
-      "Delivery acelerado y costos optimizados con prácticas modernas.",
-    Icon: DevopsSvg,
-  },
-  {
-    title: "BIM y Gemelo Digital",
-    description:
-      "Modelos conectados a la operación para decidir con contexto real.",
-    Icon: BimSvg,
-  },
-  {
-    title: "Ciberseguridad",
-    description:
-      "Sistemas seguros con protección integral y cumplimiento normativo.",
-    Icon: CybersecuritySvg,
-  },
-  {
-    title: "Diseño de Producto",
-    description:
-      "Ideas convertidas en productos de impacto con diseño centrado en el usuario.",
-    Icon: DesignSvg,
-  },
+const ITEM_KEYS = [
+  "dataScience",
+  "devops",
+  "bim",
+  "cyber",
+  "design",
 ] as const;
 
+const ICONS: ComponentType<{ className?: string }>[] = [
+  ChromeSvg,
+  DevopsSvg,
+  BimSvg,
+  CybersecuritySvg,
+  DesignSvg,
+];
+
 export function VideoUnderVideoSection() {
+  const { t } = useTranslation();
+
+  const items = useMemo(
+    () =>
+      ITEM_KEYS.map((key, i) => ({
+        title: t(`videoUnderVideo.items.${key}.title`),
+        description: t(`videoUnderVideo.items.${key}.desc`),
+        Icon: ICONS[i]!,
+      })),
+    [t]
+  );
+
   return (
     <section className="relative mb-24 mt-10 snap-center">
       <div className="mx-auto max-w-6xl">
         <h3 className="font-chakra mb-6 text-center text-2xl font-semibold text-white sm:text-3xl">
-          Integración de soluciones tecnológicas
+          {t("videoUnderVideo.sectionTitle")}
         </h3>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -95,9 +86,11 @@ export function VideoUnderVideoSection() {
                     <button
                       type="button"
                       className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-black/35 px-3 py-1.5 text-xs font-semibold text-white/80 transition-colors hover:bg-white/5 hover:text-white"
-                      aria-label={`Explorar ${item.title}`}
+                      aria-label={t("videoUnderVideo.exploreAria", {
+                        title: item.title,
+                      })}
                     >
-                      Explora
+                      {t("videoUnderVideo.explore")}
                       <span
                         className="flex size-7 items-center justify-center rounded-md bg-white/5"
                         aria-hidden

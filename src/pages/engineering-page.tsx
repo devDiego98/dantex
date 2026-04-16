@@ -27,6 +27,7 @@ import {
   type ReviewItem,
 } from "@/components/reviews-carousel";
 import { VideoUnderVideoSection } from "@/components/video-under-video-section";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -53,120 +54,42 @@ const staggerItem = {
   },
 };
 
-const services = [
-  {
-    title: "Consultoría",
-    description:
-      "Estrategia técnica y de producto alineada a tus objetivos de negocio.",
-  },
-  {
-    title: "Diseño y Cálculo",
-    description: "Modelado, simulación y validación con rigor de ingeniería.",
-  },
-  {
-    title: "Gestión de Proyectos",
-    description:
-      "Entregas predecibles con visibilidad y métricas en tiempo real.",
-  },
-  {
-    title: "Mantenimiento",
-    description: "Operación continua, observabilidad y mejora incremental.",
-  },
-  {
-    title: "Análisis de Datos",
-    description:
-      "De métricas a decisiones: pipelines, dashboards y analítica avanzada.",
-  },
-];
-
-const reviews: readonly ReviewItem[] = [
-  {
-    id: "rbi-1",
-    quote:
-      "El equipo de líderes siempre está disponible para ayudarnos en todo. Además, el equipo técnico es muy sólido y comprometido con nuestros proyectos.",
-    author: "Bruno Tadayoshi Mendes Doy",
-    role: "Director de Ingeniería",
-    company: "Restaurant Brands International",
-    logo: (
-      <div className="flex items-center justify-center gap-3">
-        <span className="text-[44px] font-semibold leading-none tracking-tight text-white">
-          rbi
-        </span>
-        <span className="max-w-[12rem] text-left text-[10px] font-medium uppercase leading-snug tracking-[0.22em] text-white/60">
-          restaurant
-          <br />
-          brands
-          <br />
-          international
-        </span>
-      </div>
-    ),
-  },
-  {
-    id: "rbi-2",
-    quote:
-      "La colaboración fue fluida desde el día uno: claridad, velocidad y una ejecución impecable. Se sienten como una extensión del equipo.",
-    author: "Líder de Tecnología",
-    role: "Engineering Manager",
-    company: "Enterprise",
-  },
-  {
-    id: "rbi-3",
-    quote:
-      "Excelente nivel técnico y foco en resultados. Cada entrega venía con visibilidad del impacto y una comunicación impecable.",
-    author: "Director de Producto",
-    role: "Head of Product",
-    company: "Retail",
-  },
+const HOW_IT_WORKS_TAG_LIST = [
+  "#frontend",
+  "#release-notes",
+  "#ticket-2987",
+  "#architecture",
+  "#feature",
+  "#performance",
 ] as const;
 
-const howItWorksSteps = [
-  {
-    id: "01",
-    title: "Cada commit es analizado por nuestro modelo de IA",
-    body: "Escanea cada cambio para entender qué se modificó y por qué.",
-    variant: "commit" as const,
-    commitLine: "Feat: add lazy loading to dashboard widgets",
-    author: "María",
-  },
-  {
-    id: "02",
-    title: "Se considera la arquitectura, pruebas, tickets y notas de release",
-    body: "El modelo cruza cada commit con la arquitectura, tareas relacionadas, resultados de testing y documentación.",
-    variant: "tags" as const,
-    tags: [
-      "#frontend",
-      "#release-notes",
-      "#ticket-2987",
-      "#architecture",
-      "#feature",
-      "#performance",
-    ],
-  },
-  {
-    id: "03",
-    title: "Medición y mejora con señales de impacto",
-    body: "Cada iteración se evalúa con métricas claras para reducir retrabajo y priorizar lo que importa al negocio.",
-    variant: "impact" as const,
-    score: 80,
-  },
-];
-
-const HOW_IT_WORKS_TAGS_STEP_INDEX = howItWorksSteps.findIndex(
-  (s) => s.variant === "tags"
-);
-const howItWorksTagsList: readonly string[] =
-  howItWorksSteps[HOW_IT_WORKS_TAGS_STEP_INDEX]?.variant === "tags"
-    ? howItWorksSteps[HOW_IT_WORKS_TAGS_STEP_INDEX].tags
-    : [];
-const HOW_IT_WORKS_TAG_ORBIT_COUNT = Math.max(1, howItWorksTagsList.length);
+export type HowItWorksStep =
+  | {
+      id: string;
+      title: string;
+      body: string;
+      variant: "commit";
+      commitLine: string;
+      author: string;
+    }
+  | {
+      id: string;
+      title: string;
+      body: string;
+      variant: "tags";
+      tags: readonly string[];
+    }
+  | {
+      id: string;
+      title: string;
+      body: string;
+      variant: "impact";
+      score: number;
+    };
 
 /** Tags fly to center one-by-one, then marble becomes glow, then ring + counter. */
 const HOW_IT_WORKS_TAG_ABSORB_STAGGER_S = 0.1;
 const HOW_IT_WORKS_TAG_ABSORB_MOVE_S = 0.5;
-const HOW_IT_WORKS_TAGS_ABSORB_END_S =
-  (HOW_IT_WORKS_TAG_ORBIT_COUNT - 1) * HOW_IT_WORKS_TAG_ABSORB_STAGGER_S +
-  HOW_IT_WORKS_TAG_ABSORB_MOVE_S;
 const HOW_IT_WORKS_MARBLE_TO_LIGHT_S = 0.72;
 /** Progress arc + 1→80 counter (slow). */
 const HOW_IT_WORKS_IMPACT_RING_PROGRESS_S = 2.65;
@@ -176,9 +99,6 @@ const HOW_IT_WORKS_IMPACT_RING_EASE_FN = cubicBezier(
   HOW_IT_WORKS_IMPACT_RING_EASE[1],
   HOW_IT_WORKS_IMPACT_RING_EASE[2],
   HOW_IT_WORKS_IMPACT_RING_EASE[3]
-);
-const HOW_IT_WORKS_IMPACT_STEP_INDEX = howItWorksSteps.findIndex(
-  (s) => s.variant === "impact"
 );
 
 function tagOrbitMotion(
@@ -256,6 +176,7 @@ function EngineeringHeroOrb({
 }
 
 function EngineeringHero() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -307,27 +228,26 @@ function EngineeringHero() {
               variants={staggerItem}
               className="mb-4 text-left text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90"
             >
-              Lo que hacemos
+              {t("engineering.hero.kicker")}
             </motion.p>
             <motion.h1
               variants={staggerItem}
               className="font-chakra mb-6 text-left text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.15rem]"
             >
-              Ingeniería Optimizada con IA
+              {t("engineering.hero.title")}
             </motion.h1>
             <motion.p
               variants={staggerItem}
               className="mb-10 max-w-lg text-left text-base leading-relaxed text-white/85 sm:text-lg"
             >
-              Integra expertos, IA y métricas transparentes para lograr
-              resultados concretos.
+              {t("engineering.hero.subtitle")}
             </motion.p>
             <motion.div variants={staggerItem}>
               <a
                 href="#contacto"
                 className="inline-flex h-11 shrink-0 items-center justify-center rounded-xl border border-transparent bg-white px-8 text-sm font-semibold text-[#0f766e] shadow-lg shadow-black/20 transition-colors hover:bg-white/95"
               >
-                Descubre lo que puedes lograr
+                {t("engineering.hero.cta")}
               </a>
             </motion.div>
           </motion.div>
@@ -508,7 +428,29 @@ function ImpactHaloRing({
   );
 }
 
-function HowItWorksScrollySection() {
+function HowItWorksScrollySection({ steps }: { steps: HowItWorksStep[] }) {
+  const { t } = useTranslation();
+  const tagsStepIndex = useMemo(
+    () => steps.findIndex((s) => s.variant === "tags"),
+    [steps]
+  );
+  const impactStepIndex = useMemo(
+    () => steps.findIndex((s) => s.variant === "impact"),
+    [steps]
+  );
+  const howItWorksTagsList: readonly string[] = useMemo(() => {
+    if (tagsStepIndex < 0) return [];
+    const s = steps[tagsStepIndex];
+    return s?.variant === "tags" ? s.tags : [];
+  }, [steps, tagsStepIndex]);
+  const tagOrbitCount = Math.max(1, howItWorksTagsList.length);
+  const tagsAbsorbEndS = useMemo(() => {
+    return (
+      (tagOrbitCount - 1) * HOW_IT_WORKS_TAG_ABSORB_STAGGER_S +
+      HOW_IT_WORKS_TAG_ABSORB_MOVE_S
+    );
+  }, [tagOrbitCount]);
+
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [active, setActive] = useState(0);
   const [playedTagsStep, setPlayedTagsStep] = useState(false);
@@ -520,7 +462,7 @@ function HowItWorksScrollySection() {
       const mid = window.innerHeight * 0.5;
       let best = 0;
       let bestDist = Number.POSITIVE_INFINITY;
-      for (let i = 0; i < howItWorksSteps.length; i++) {
+      for (let i = 0; i < steps.length; i++) {
         const el = stepRefs.current[i];
         if (!el) continue;
         const r = el.getBoundingClientRect();
@@ -541,25 +483,25 @@ function HowItWorksScrollySection() {
       window.removeEventListener("scroll", pickActiveStep);
       window.removeEventListener("resize", pickActiveStep);
     };
-  }, []);
+  }, [steps.length]);
 
   useEffect(() => {
-    if (active !== HOW_IT_WORKS_TAGS_STEP_INDEX) return undefined;
+    if (active !== tagsStepIndex) return undefined;
     const id = requestAnimationFrame(() => {
       setPlayedTagsStep(true);
     });
     return () => cancelAnimationFrame(id);
-  }, [active]);
+  }, [active, tagsStepIndex]);
 
   const impactRingIntroDelayS = useMemo(() => {
-    if (active !== HOW_IT_WORKS_IMPACT_STEP_INDEX) return 0;
+    if (active !== impactStepIndex) return 0;
     return playedTagsStep
-      ? HOW_IT_WORKS_TAGS_ABSORB_END_S + HOW_IT_WORKS_MARBLE_TO_LIGHT_S
+      ? tagsAbsorbEndS + HOW_IT_WORKS_MARBLE_TO_LIGHT_S
       : HOW_IT_WORKS_MARBLE_TO_LIGHT_S;
-  }, [active, playedTagsStep]);
+  }, [active, playedTagsStep, impactStepIndex, tagsAbsorbEndS]);
 
   useEffect(() => {
-    if (active !== HOW_IT_WORKS_IMPACT_STEP_INDEX) {
+    if (active !== impactStepIndex) {
       const resetId = requestAnimationFrame(() => {
         setImpactLoaderN(1);
         setImpactLoaderVisible(false);
@@ -605,13 +547,11 @@ function HowItWorksScrollySection() {
       cancelAnimationFrame(tickRaf);
       window.clearTimeout(delayTimer);
     };
-  }, [active, impactRingIntroDelayS]);
+  }, [active, impactRingIntroDelayS, impactStepIndex]);
 
-  const step = howItWorksSteps[active];
+  const step = steps[active]!;
   const marblePhaseDelayS =
-    active === HOW_IT_WORKS_IMPACT_STEP_INDEX && playedTagsStep
-      ? HOW_IT_WORKS_TAGS_ABSORB_END_S
-      : 0;
+    active === impactStepIndex && playedTagsStep ? tagsAbsorbEndS : 0;
   const showTagOrbit =
     howItWorksTagsList.length > 0 &&
     (step.variant === "tags" || (step.variant === "impact" && playedTagsStep));
@@ -622,7 +562,7 @@ function HowItWorksScrollySection() {
       className="relative left-1/2 w-screen -translate-x-1/2 scroll-mt-24 text-left"
       style={
         {
-          "--how-it-works-steps": howItWorksSteps.length,
+          "--how-it-works-steps": steps.length,
         } as CSSProperties
       }
     >
@@ -639,10 +579,10 @@ function HowItWorksScrollySection() {
       <div className="relative mx-auto max-w-[1380px] px-4 pt-14 sm:px-6 lg:px-10">
         <motion.div className={cn("mb-12 snap-center lg:mb-16")} {...fadeUp}>
           <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-200/90">
-            Un proceso transparente para medir el impacto
+            {t("engineering.howItWorks.kicker")}
           </p>
           <h2 className="font-chakra text-3xl font-semibold text-white sm:text-4xl lg:text-[2.35rem]">
-            Cómo funciona
+            {t("engineering.howItWorks.title")}
           </h2>
         </motion.div>
 
@@ -886,7 +826,9 @@ function HowItWorksScrollySection() {
                             </p>
                             <div className="mt-3 flex items-center justify-end gap-2 border-t border-white/[0.06] pt-2.5">
                               <span className="text-xs text-zinc-400">
-                                By {step.author}
+                                {t("engineering.byAuthor", {
+                                  name: step.author,
+                                })}
                               </span>
                               <span
                                 className="inline-block size-8 shrink-0 rounded-full bg-gradient-to-br from-amber-200/90 via-teal-400 to-teal-800 ring-1 ring-white/15"
@@ -903,7 +845,7 @@ function HowItWorksScrollySection() {
             </div>
 
             <div className="relative">
-              {howItWorksSteps.map((s, i) => (
+              {steps.map((s, i) => (
                 <div
                   key={s.id}
                   ref={(el) => {
@@ -945,33 +887,30 @@ type ImpactScoreVideoItem = {
   src: string;
 };
 
-const impactScoreVideos: readonly ImpactScoreVideoItem[] = [
-  {
-    id: "matriz",
-    label: "Matriz de Desempeño",
-    src: "/videos/matriz-de-desempeno.mp4",
-  },
-  {
-    id: "commits",
-    label: "Análisis de Commits",
-    src: "/videos/analisis-de-commits.mp4",
-  },
-  {
-    id: "evolucion",
-    label: "Evolución Profesional",
-    src: "/videos/evolucion-profesional.mp4",
-  },
-  {
-    id: "feedback",
-    label: "Feedback con IA",
-    src: "/videos/feedback-con-ia.mp4",
-  },
-] as const;
-
 function ImpactScoreVideoShowcase() {
-  const [activeId, setActiveId] = useState<ImpactScoreVideoItem["id"]>(
-    impactScoreVideos[0]?.id ?? "matriz"
-  );
+  const { t } = useTranslation();
+  const impactScoreVideos = useMemo((): readonly ImpactScoreVideoItem[] => {
+    const ids = [
+      "matriz",
+      "commits",
+      "evolucion",
+      "feedback",
+    ] as const satisfies readonly ImpactScoreVideoItem["id"][];
+    const srcById: Record<ImpactScoreVideoItem["id"], string> = {
+      matriz: "/videos/matriz-de-desempeno.mp4",
+      commits: "/videos/analisis-de-commits.mp4",
+      evolucion: "/videos/evolucion-profesional.mp4",
+      feedback: "/videos/feedback-con-ia.mp4",
+    };
+    return ids.map((id) => ({
+      id,
+      label: t(`engineering.impactVideo.tabs.${id}`),
+      src: srcById[id],
+    }));
+  }, [t]);
+
+  const [activeId, setActiveId] =
+    useState<ImpactScoreVideoItem["id"]>("matriz");
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
 
@@ -991,7 +930,7 @@ function ImpactScoreVideoShowcase() {
       const el = videoRefs.current[v.id];
       el?.load();
     }
-  }, []);
+  }, [impactScoreVideos]);
 
   async function pauseAll() {
     for (const v of impactScoreVideos) {
@@ -1073,10 +1012,10 @@ function ImpactScoreVideoShowcase() {
       />
       <div className="relative z-[1]">
         <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-teal-400">
-          Soluciones
+          {t("engineering.impactVideo.kicker")}
         </p>
         <h2 className="font-chakra mb-6 text-center text-2xl font-semibold text-white sm:text-3xl">
-          Software de última generación
+          {t("engineering.impactVideo.title")}
         </h2>
 
         <div className="mx-auto mb-6 flex w-full max-w-5xl flex-wrap items-center justify-center gap-2.5 sm:gap-3">
@@ -1168,7 +1107,9 @@ function ImpactScoreVideoShowcase() {
                     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/70"
                   )}
                   aria-label={
-                    hasEnded ? "Reproducir de nuevo" : "Reproducir video"
+                    hasEnded
+                      ? t("engineering.impactVideo.playAgain")
+                      : t("engineering.impactVideo.playVideo")
                   }
                 >
                   <span
@@ -1196,6 +1137,83 @@ function ImpactScoreVideoShowcase() {
 }
 
 export function EngineeringPage() {
+  const { t } = useTranslation();
+
+  const howItWorksSteps = useMemo((): HowItWorksStep[] => {
+    return [
+      {
+        id: "01",
+        variant: "commit",
+        title: t("engineering.howItWorks.step1.title"),
+        body: t("engineering.howItWorks.step1.body"),
+        commitLine: t("engineering.howItWorks.step1.commitLine"),
+        author: t("engineering.howItWorks.step1.author"),
+      },
+      {
+        id: "02",
+        variant: "tags",
+        title: t("engineering.howItWorks.step2.title"),
+        body: t("engineering.howItWorks.step2.body"),
+        tags: HOW_IT_WORKS_TAG_LIST,
+      },
+      {
+        id: "03",
+        variant: "impact",
+        title: t("engineering.howItWorks.step3.title"),
+        body: t("engineering.howItWorks.step3.body"),
+        score: 80,
+      },
+    ];
+  }, [t]);
+
+  const services = useMemo(
+    () =>
+      [
+        {
+          title: t("engineering.services.consulting.title"),
+          description: t("engineering.services.consulting.desc"),
+        },
+        {
+          title: t("engineering.services.design.title"),
+          description: t("engineering.services.design.desc"),
+        },
+        {
+          title: t("engineering.services.projects.title"),
+          description: t("engineering.services.projects.desc"),
+        },
+        {
+          title: t("engineering.services.maintenance.title"),
+          description: t("engineering.services.maintenance.desc"),
+        },
+        {
+          title: t("engineering.services.data.title"),
+          description: t("engineering.services.data.desc"),
+        },
+      ] as const,
+    [t]
+  );
+
+  const reviews = useMemo((): ReviewItem[] => {
+    const items = t("engineering.reviews.items", {
+      returnObjects: true,
+    }) as Array<{
+      quote: string;
+      author: string;
+      role: string;
+      company: string;
+    }>;
+    return items.map((item, i) => ({
+      id: `engineering-review-${i}`,
+      ...item,
+    }));
+  }, [t]);
+
+  const whatYouGetItems = useMemo(
+    () =>
+      t("engineering.whatYouGet.items", { returnObjects: true }) as string[],
+    [t]
+  );
+
   useEffect(() => {
     document.documentElement.classList.add("engineering-scroll-snap");
     return () => {
@@ -1225,7 +1243,7 @@ export function EngineeringPage() {
       <section className="mb-24 snap-center">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h3 className="font-chakra mb-6 text-center text-2xl font-semibold text-white sm:text-3xl">
-            Impacto con nuestras soluciones
+            {t("engineering.marquee.title")}
           </h3>
 
           <div className="rounded-2xl border border-white/10 bg-black/35 px-4 py-5 shadow-[0_30px_90px_-70px_rgba(94,234,212,0.45)] backdrop-blur-sm sm:px-8">
@@ -1252,11 +1270,11 @@ export function EngineeringPage() {
         {...fadeUp}
       >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-200/90">
-          The Santex Way
+          {t("engineering.dantexWay.label")}
         </p>
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-chakra max-w-xl text-3xl font-semibold text-white sm:text-4xl">
-            Enfoque de Impacto
+            {t("engineering.dantexWay.title")}
           </h2>
           <div className="hidden h-px flex-1 bg-gradient-to-r from-white/15 to-transparent sm:ml-8 sm:block" />
         </div>
@@ -1278,7 +1296,7 @@ export function EngineeringPage() {
                   />
                   <img
                     src="/fast_delivery.avif"
-                    alt="Delivery potenciado con IA"
+                    alt={t("engineering.dantexWay.deliveryAlt")}
                     className="relative h-full w-full object-cover"
                   />
                   <div
@@ -1324,7 +1342,7 @@ export function EngineeringPage() {
                       className="size-6 text-white/70"
                       aria-hidden
                     />
-                    Verified
+                    {t("engineering.dantexWay.verified")}
                   </div>
                   <div
                     className="pointer-events-none absolute inset-0 rounded-2xl"
@@ -1340,15 +1358,13 @@ export function EngineeringPage() {
             <div className="flex flex-col justify-center">
               <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-400">
                 <Sparkles className="size-4" aria-hidden />
-                Delivery aumentado
+                {t("engineering.dantexWay.deliveryBadge")}
               </p>
               <h3 className="font-chakra mb-4 text-2xl font-semibold text-white sm:text-3xl">
-                Delivery más rápido y potenciado con IA
+                {t("engineering.dantexWay.deliveryTitle")}
               </h3>
               <p className="text-base leading-relaxed text-zinc-400">
-                Combina equipos de ingeniería con copilots, QA automatizado y
-                analítica predictiva para reducir retrabajo y acelerar
-                resultados.
+                {t("engineering.dantexWay.deliveryBody")}
               </p>
             </div>
           </motion.article>
@@ -1376,7 +1392,7 @@ export function EngineeringPage() {
                   />
                   <img
                     src="/motion_picture.avif"
-                    alt="Panel de métricas y ciudad en movimiento"
+                    alt={t("engineering.dantexWay.impactAlt")}
                     className="relative h-full w-full object-cover"
                   />
                   <div
@@ -1397,7 +1413,7 @@ export function EngineeringPage() {
                       "translateZ(58px) rotateY(-10deg) rotateX(-6deg)",
                   }}
                 >
-                  Score: 80
+                  {t("engineering.dantexWay.score")}
                 </FloatingBadge>
 
                 {/* Large glass panel (overflows image) */}
@@ -1410,10 +1426,10 @@ export function EngineeringPage() {
                 >
                   <div className="flex items-center justify-between gap-3">
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-                      Impact
+                      {t("engineering.dantexWay.impactLabel")}
                     </p>
                     <span className="rounded-full border border-white/15 bg-black/35 px-2.5 py-1 text-[10px] font-medium text-white/80">
-                      Score: 80
+                      {t("engineering.dantexWay.score")}
                     </span>
                   </div>
 
@@ -1440,22 +1456,20 @@ export function EngineeringPage() {
             <div className="flex flex-col justify-center [direction:ltr]">
               <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-400">
                 <Target className="size-4" aria-hidden />
-                Desarrollo orientado al impacto
+                {t("engineering.dantexWay.impactBadge")}
               </p>
               <h3 className="font-chakra mb-4 text-2xl font-semibold text-white sm:text-3xl">
-                Medimos el valor entregado, commit por commit
+                {t("engineering.dantexWay.impactTitle")}
               </h3>
               <p className="text-base leading-relaxed text-zinc-400">
-                Cada cambio de código se evalúa por su profundidad técnica e
-                impacto en el negocio, para que tu proyecto avance con
-                propósito.
+                {t("engineering.dantexWay.impactBody")}
               </p>
             </div>
           </motion.article>
         </div>
       </motion.section>
 
-      <HowItWorksScrollySection />
+      <HowItWorksScrollySection steps={howItWorksSteps} />
 
       <motion.section
         className="relative mb-20 snap-center px-4 sm:px-0"
@@ -1484,19 +1498,13 @@ export function EngineeringPage() {
           <div className="relative grid gap-10 md:grid-cols-[0.9fr,1.6fr] md:items-start md:gap-14">
             <div>
               <h3 className="font-chakra text-3xl font-semibold text-white sm:text-4xl">
-                Qué obtienes
+                {t("engineering.whatYouGet.title")}
               </h3>
             </div>
 
             <div className="md:border-l md:border-white/10 md:pl-12">
               <ul className="divide-y divide-white/10 text-sm text-zinc-100/90 sm:text-base">
-                {[
-                  "Identificar a los héroes ocultos",
-                  "Feedback objetivo y sin sesgos",
-                  "Alertas tempranas sobre deuda técnica",
-                  "Benchmarks de velocidad y calidad entre equipos",
-                  "Claridad sobre el ROI, desde el esfuerzo hasta el impacto",
-                ].map((line) => (
+                {whatYouGetItems.map((line) => (
                   <li key={line} className="flex gap-4 py-4">
                     <CheckCircle2
                       className="mt-0.5 size-5 shrink-0 text-teal-300/80"
@@ -1516,10 +1524,10 @@ export function EngineeringPage() {
 
       <motion.section className="relative z-[1] mb-24 snap-center" {...fadeUp}>
         <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-200/90">
-          Reseñas
+          {t("engineering.reviews.kicker")}
         </p>
         <h2 className="font-chakra mb-10 text-center text-2xl font-semibold text-white sm:text-3xl">
-          Lo que dicen nuestros clientes
+          {t("engineering.reviews.title")}
         </h2>
         <ReviewsCarousel items={reviews} />
       </motion.section>
@@ -1529,7 +1537,7 @@ export function EngineeringPage() {
         {...fadeUp}
       >
         <h2 className="font-chakra mb-8 text-center text-2xl font-semibold text-white sm:text-3xl">
-          Nuestros servicios de ingeniería
+          {t("engineering.services.sectionTitle")}
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
@@ -1560,9 +1568,9 @@ export function EngineeringPage() {
         {...fadeUp}
       >
         {[
-          { n: "100+", l: "Proyectos entregados" },
-          { n: "50+", l: "Especialistas" },
-          { n: "10+", l: "Industrias" },
+          { n: "100+", l: t("engineering.stats.projects") },
+          { n: "50+", l: t("engineering.stats.specialists") },
+          { n: "10+", l: t("engineering.stats.industries") },
         ].map((stat) => (
           <div key={stat.l}>
             <p className="font-chakra text-4xl font-semibold text-white sm:text-5xl">
@@ -1579,18 +1587,18 @@ export function EngineeringPage() {
         {...fadeUp}
       >
         <p className="mb-2 text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-200/90">
-          ¿Estás listo?
+          {t("engineering.contact.kicker")}
         </p>
         <h2 className="font-chakra mx-auto mb-10 max-w-3xl text-center text-2xl font-semibold leading-snug text-white sm:text-3xl">
-          ¿Tienes un proyecto en mente? Hablemos de tus ideas
+          {t("engineering.contact.title")}
         </h2>
         <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2 lg:gap-12">
           <div className="text-left">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
-              Contáctanos
+              {t("engineering.contact.label")}
             </p>
             <p className="text-lg text-zinc-200">
-              Cuéntanos qué necesitas y te respondemos en breve.
+              {t("engineering.contact.subtitle")}
             </p>
           </div>
           <form
@@ -1599,21 +1607,21 @@ export function EngineeringPage() {
           >
             <input
               type="text"
-              placeholder="Nombre"
+              placeholder={t("engineering.contact.name")}
               className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-teal-500/50 focus:outline-none"
             />
             <input
               type="email"
-              placeholder="Email"
+              placeholder={t("engineering.contact.email")}
               className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-teal-500/50 focus:outline-none"
             />
             <input
               type="text"
-              placeholder="Asunto"
+              placeholder={t("engineering.contact.subject")}
               className="rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-teal-500/50 focus:outline-none"
             />
             <textarea
-              placeholder="Mensaje"
+              placeholder={t("engineering.contact.message")}
               rows={4}
               className="resize-none rounded-xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white placeholder:text-zinc-500 focus:border-teal-500/50 focus:outline-none"
             />
@@ -1622,7 +1630,7 @@ export function EngineeringPage() {
                 type="submit"
                 className="rounded-full bg-white px-6 text-zinc-900 hover:bg-white/90"
               >
-                Enviar mensaje
+                {t("engineering.contact.submit")}
               </Button>
             </div>
           </form>
@@ -1632,7 +1640,7 @@ export function EngineeringPage() {
       <motion.a
         href="#contacto"
         className="fixed bottom-6 right-6 z-50 flex size-14 items-center justify-center rounded-full bg-teal-500 text-white shadow-lg shadow-teal-500/30 transition-transform hover:scale-105"
-        aria-label="Abrir contacto"
+        aria-label={t("engineering.contact.fabAria")}
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.4, type: "spring", stiffness: 300 }}

@@ -1,0 +1,88 @@
+{
+  "agtech": {
+    "kicker": "Industries · Agriculture",
+    "heroTitle": "Data, AI, and automation to produce better every cycle.",
+    "heroLead": "We connect sensors, machinery, satellite imagery, and management systems so you can make evidence-based decisions across the full production cycle.",
+    "ctaCall": "Book a conversation",
+    "ctaCases": "See use cases",
+    "whereTitle": "Where are you today?",
+    "whereHeadline": "Does your farm already generate data—but not better decisions yet?",
+    "whereP1": "Many organizations already have yield history, applications, weather, and logistics data, but it lives in silos or spreadsheets nobody checks in time.",
+    "whereP2": "At Dantex we help connect those sources, design simple prediction models, and deliver actionable insights where decisions are made: the field, planning, and leadership.",
+    "impactKicker": "Impact in the field",
+    "impactHeadline": "What we help unlock in your farming operation.",
+    "cards": [
+      {
+        "title": "Daily visibility",
+        "body": "Dashboards that show yield, moisture, and field status without opening spreadsheets."
+      },
+      {
+        "title": "Less waste",
+        "body": "More precise input applications based on historical data and forecasts."
+      },
+      {
+        "title": "Predictable operations",
+        "body": "Early alerts for deviations in irrigation, logistics, or weather."
+      },
+      {
+        "title": "Evidence-led strategy",
+        "body": "Scenario simulations to decide investments season after season."
+      }
+    ],
+    "satKicker": "Data you can see",
+    "satTitle": "From satellite imagery to management decisions by zone.",
+    "satBody": "We translate indices like NDVI, moisture, and soil temperature into concrete management recommendations integrated with your current systems.",
+    "satCta": "See how we do it",
+    "solutionsKicker": "Agtech solutions",
+    "solutionsTitle": "Use cases we build with our clients.",
+    "solutionsL1Strong": "Yield and variability dashboards:",
+    "solutionsL1Rest": "they consolidate multi-year data to define zones and densities.",
+    "solutionsL2Strong": "Production forecasting models:",
+    "solutionsL2Rest": "they combine weather, soils, and practices to anticipate outcomes.",
+    "solutionsL3Strong": "Machinery and logistics monitoring:",
+    "solutionsL3Rest": "real-time tracking to reduce idle time.",
+    "ecoKicker": "Technology ecosystem",
+    "alliances": "Alliances",
+    "alliancesTitle": "We work with leading cloud, data, and hardware providers in agriculture.",
+    "alliancesBody": "We integrate your existing stack (ERP, field platforms, imagery providers) without forcing unnecessary migrations.",
+    "workKicker": "How we work",
+    "workTitle": "From a concrete pilot to a platform that scales.",
+    "workSteps": [
+      {
+        "title": "Discovery with your team",
+        "body": "We understand available data, critical decisions, and field constraints."
+      },
+      {
+        "title": "Measurable pilot",
+        "body": "We define a use case, a test area, and clear success metrics."
+      },
+      {
+        "title": "Responsible scale",
+        "body": "We expand to more hectares and teams with adoption in mind."
+      }
+    ],
+    "stepWord": "Step",
+    "contactKicker": "Let’s talk",
+    "contactTitle": "Ready to explore a use case in your operation?",
+    "contactLead": "Tell us briefly about your crop, region, and current challenges. An agtech-focused team responds in under 2 business days.",
+    "formIntro": "Book a call with our agtech team.",
+    "nameLabel": "Full name",
+    "namePh": "Jane Doe",
+    "roleLabel": "Role in the organization",
+    "rolePh": "Head of operations, CEO, etc.",
+    "emailLabel": "Contact email",
+    "emailPh": "you@company.com",
+    "regionLabel": "Country and region",
+    "regionPh": "USA · Midwest, Brazil · Mato Grosso, etc.",
+    "exploreLabel": "What would you like to explore?",
+    "explorePh": "Tell us about your crops, hectares, current technology, and challenges you want to solve.",
+    "submit": "Send message",
+    "consent": "By submitting this form you agree to be contacted by our team to schedule the next conversation.",
+    "expectTitle": "What to expect on the first call.",
+    "expect1": "• Quick review of your context and current technology.",
+    "expect2": "• Identification of 1–2 use cases with measurable impact.",
+    "expect3": "• Clear next steps and timelines.",
+    "timeKicker": "Estimated time",
+    "timeBody": "45 minutes to understand your operation and define a viable pilot."
+  }
+}

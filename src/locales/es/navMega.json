@@ -1,0 +1,43 @@
+{
+  "navMega": {
+    "whatWeDo": "Lo que hacemos",
+    "solutions": "Soluciones",
+    "servicios": {
+      "aiEngineering": "Ingeniería Optimizada con IA",
+      "stxLab": "STX Lab",
+      "aiConsulting": "Consultoría en IA"
+    },
+    "solutionsTags": {
+      "bim": "BIM",
+      "data": "Data",
+      "devops": "DevOps",
+      "cyber": "Ciberseguridad",
+      "design": "Diseño de Producto"
+    },
+    "industriesLabel": "Industrias",
+    "industries": {
+      "ag": "Agricultura",
+      "energy": "Energía",
+      "finance": "Finanzas",
+      "foodtech": "Foodtech",
+      "govtech": "Govtech",
+      "health": "Salud",
+      "sports": "Deportes & Entretenimiento"
+    },
+    "featuredStory": "Historias destacadas",
+    "featuredBlurb": "Firehouse recurre a Dantex para pagos más seguros, inteligentes y sin interrupciones",
+    "insightsLabel": "Insights",
+    "impactStories": "Historias de impacto",
+    "blog": "Blog",
+    "podcast": "Podcast",
+    "latestStories": "Últimas historias",
+    "insight1": "ROI en IA: ¿Tu proyecto genera valor real?",
+    "insight2": "Cómo escalar equipos de producto con IA responsable",
+    "communityLabel": "Somos Dantex",
+    "workAt": "Trabaja en Dantex",
+    "culture": "Cultura",
+    "sustainability": "Sustentabilidad",
+    "hackathon": "Hackathon",
+    "makingADifference": "Haciendo la diferencia"
+  }
+}

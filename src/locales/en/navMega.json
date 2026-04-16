@@ -1,0 +1,43 @@
+{
+  "navMega": {
+    "whatWeDo": "What we do",
+    "solutions": "Solutions",
+    "servicios": {
+      "aiEngineering": "AI-optimized engineering",
+      "stxLab": "STX Lab",
+      "aiConsulting": "AI consulting"
+    },
+    "solutionsTags": {
+      "bim": "BIM",
+      "data": "Data",
+      "devops": "DevOps",
+      "cyber": "Cybersecurity",
+      "design": "Product design"
+    },
+    "industriesLabel": "Industries",
+    "industries": {
+      "ag": "Agriculture",
+      "energy": "Energy",
+      "finance": "Finance",
+      "foodtech": "Foodtech",
+      "govtech": "Govtech",
+      "health": "Healthcare",
+      "sports": "Sports & entertainment"
+    },
+    "featuredStory": "Featured stories",
+    "featuredBlurb": "Firehouse turns to Dantex for smarter, safer, uninterrupted payments",
+    "insightsLabel": "Insights",
+    "impactStories": "Impact stories",
+    "blog": "Blog",
+    "podcast": "Podcast",
+    "latestStories": "Latest stories",
+    "insight1": "AI ROI: Is your project delivering real value?",
+    "insight2": "How to scale product teams with responsible AI",
+    "communityLabel": "We are Dantex",
+    "workAt": "Work at Dantex",
+    "culture": "Culture",
+    "sustainability": "Sustainability",
+    "hackathon": "Hackathon",
+    "makingADifference": "Making a difference"
+  }
+}

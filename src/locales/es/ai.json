@@ -1,0 +1,92 @@
+{
+  "ai": {
+    "hero": {
+      "kicker": "Servicios",
+      "title": "Consultoría en Innovación e IA",
+      "lead": "Diseñamos e implementamos soluciones de IA que escalan con su negocio: desde estrategia y gobernanza hasta integración en productos y operaciones, con foco en valor medible y adopción segura.",
+      "contact": "Contáctanos",
+      "cases": "Ver casos"
+    },
+    "ecosystem": {
+      "title": "Nuestro Ecosistema de IA",
+      "lead": "Un conjunto integrado de capacidades, herramientas y prácticas para llevar modelos generativos y analíticos avanzados a producción con calidad y cumplimiento.",
+      "play": "Reproducir video",
+      "overlayTitle": "AI-Powered Ecosystem"
+    },
+    "servicesGrid": {
+      "title": "Integrando IA en…",
+      "lead": "Casos de uso concretos donde aceleramos resultados con equipos multidisciplinarios.",
+      "learnMore": "Saber más",
+      "cards": [
+        {
+          "title": "Retail",
+          "description": "Personalización, demanda y operaciones de tienda potenciadas con modelos en tiempo real."
+        },
+        {
+          "title": "Salud",
+          "description": "Asistentes clínicos, triage y analítica asistida respetando privacidad y normativa."
+        },
+        {
+          "title": "Finanzas",
+          "description": "Detección de fraude, scoring y automatización documental con trazabilidad."
+        },
+        {
+          "title": "Industria",
+          "description": "Mantenimiento predictivo, visión por computador y gemelos digitales conectados."
+        }
+      ]
+    },
+    "midCta": {
+      "text": "¿Listo para iniciar su recorrido con IA?",
+      "cta": "Contáctanos"
+    },
+    "partner": {
+      "title": "Empoderando la IA con tecnología de vanguardia",
+      "body": "Combinamos nuestra experiencia en producto y datos con plataformas de aceleración y entrenamiento líderes en la industria. Así acortamos el camino desde experimentación hasta inferencia en producción, con infraestructura preparada para cargas exigentes y equipos que dominan el stack completo."
+    },
+    "logoCloud": {
+      "title": "Tecnología y alianzas"
+    },
+    "whyUs": {
+      "title": "¿Por qué elegirnos para liderar su transformación digital?",
+      "lead": "Somos un partner de producto y tecnología: alineamos liderazgo ejecutivo, equipos de datos y squads de entrega para que la IA deje de ser un experimento aislado y se convierta en capacidad recurrente del negocio.",
+      "features": [
+        {
+          "title": "Expertise técnica",
+          "body": "Arquitectos de ML, MLOps y software que han llevado modelos a escala en entornos regulados."
+        },
+        {
+          "title": "Enfoque en el negocio",
+          "body": "Priorizamos iniciativas por impacto: métricas claras, ownership y roadmap realista."
+        },
+        {
+          "title": "Gobernanza y confianza",
+          "body": "Privacidad, seguridad y uso responsable de IA integrados desde el diseño, no como afterthought."
+        },
+        {
+          "title": "Velocidad con rigor",
+          "body": "Ciclos cortos de validación con calidad de ingeniería: pruebas, observabilidad y rollback."
+        }
+      ]
+    },
+    "caseStudy": {
+      "title": "Cómo ayudamos a una empresa líder a industrializar su copiloto interno",
+      "body": "Unificamos fuentes de conocimiento, definimos políticas de uso y desplegamos un asistente conectado a sistemas transaccionales, reduciendo tiempo de respuesta en soporte y acelerando onboarding de equipos remotos.",
+      "cta": "Ver caso de éxito"
+    },
+    "contact": {
+      "title": "Hablemos sobre su próximo proyecto",
+      "lead": "Cuéntenos su contexto y le respondemos con próximos pasos y un enfoque inicial sin compromiso.",
+      "name": "Nombre",
+      "namePh": "Su nombre",
+      "company": "Empresa",
+      "companyPh": "Empresa",
+      "email": "Email",
+      "emailPh": "nombre@empresa.com",
+      "message": "Mensaje",
+      "messagePh": "Objetivos, plazos o restricciones que debamos conocer",
+      "submit": "Enviar",
+      "linkedin": "LinkedIn"
+    }
+  }
+}

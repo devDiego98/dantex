@@ -1,0 +1,70 @@
+{
+  "healthcare": {
+    "hero": {
+      "kicker": "Industries · Healthcare",
+      "title": "Technology innovation for the future of health",
+      "lead": "We design secure AI platforms for healthcare & life sciences—turning data into better outcomes.",
+      "cta": "Get strategic guidance",
+      "highlights": [
+        "Healthcare & life sciences",
+        "Clinical data",
+        "Compliance"
+      ]
+    },
+    "introH2": "We shorten the distance between scientific progress and recovery.",
+    "introLead": "We design ecosystems that connect life science & pharma with care delivery—secure data flow from lab to patient.",
+    "providersTitle": "For healthcare providers & payers",
+    "providersLead": "Patient-centered digital experiences for modern care delivery.",
+    "interopTitle": "Interoperability & integration",
+    "interopBody": "Break silos. We connect EHR, LIS, and billing with HL7 and FHIR for secure, real-time data flow and payment integrity.",
+    "interopTags": [
+      "Patient experience solutions",
+      "Operations & member management",
+      "EHR",
+      "Billing"
+    ],
+    "pharmaTitle": "For pharma & life sciences",
+    "pharmaLead": "Accelerate innovation and market impact with agile engineering and GxP-ready infrastructure.",
+    "clinicalTitle": "Clinical data acceleration",
+    "clinicalBody": "Speed clinical trials with generative AI. We automate ingestion and analysis of complex medical data for faster results.",
+    "clinicalTags": [
+      "Commercial & patient engagement",
+      "Value chain visibility"
+    ],
+    "trustTitle": "Trusted engineering in a regulated world",
+    "trustLead": "Critical industries demand critical engineering. Our core capabilities span the full health spectrum.",
+    "trustPillars": [
+      {
+        "title": "Security & compliance",
+        "body": "ISO 27001 certified security. HIPAA experience and infrastructure ready for GxP/FDA validation."
+      },
+      {
+        "title": "Data science & AI",
+        "body": "Ethical AI models that unlock value from unstructured real-world data (RWD), medical records, and research databases."
+      },
+      {
+        "title": "Cloud-agnostic expertise",
+        "body": "Deep experience across AWS, Azure, and Google Cloud—optimizing architectures for performance and scale in healthcare."
+      },
+      {
+        "title": "Legacy modernization",
+        "body": "Transform monolithic systems into scalable, cloud-native architectures without disrupting critical operations."
+      }
+    ],
+    "storiesKicker": "From Potential to Impact",
+    "storiesTitle": "See how Dantex drives transformation in health",
+    "moreStories": "Explore impact stories",
+    "discoverImpact": "See the impact",
+    "stories": [
+      {
+        "title": "A smarter way to manage chronic conditions in children"
+      },
+      {
+        "title": "Cloud governance and cost management with AWS Control Tower and Terraform"
+      },
+      {
+        "title": "Second Brain: The AI assistant for smarter, faster decisions"
+      }
+    ]
+  }
+}
